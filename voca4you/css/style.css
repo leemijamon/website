@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@import "reset.css";
+@import "font.css";
+
+:root{
+	/**** Font ****/
+	--font-thin: 'Noto Sans-Thin', sans-serif;
+	--font-light: 'Noto Sans-Light', sans-serif;
+	--font-demilight: 'Noto Sans-DemiLight', sans-serif;
+	--font-regular: 'Noto Sans-Regular', sans-serif;
+	--font-medium: 'Noto Sans-Medium', sans-serif;
+	--font-bold: 'Noto Sans-Bold', sans-serif;
+	--font-black: 'Noto Sans-Black', sans-serif;
+
+	/**** Color ****/
+	--color-main: #0ac5a8;
+	--color-txt01: #333;
+	--color-txt02: #828282;
+	--color-red: #f75959;
+	--color-yellow: #fdcd4c;
+	--color-border: #e9e9e9;
+}
+
+body, html{font-family: var(--font-regular);}
+
+.container{max-width: 720px; margin: 0 auto;}
+
