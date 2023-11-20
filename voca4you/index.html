@@ -9,7 +9,8 @@
 		<meta name="description" content="중고등 필수 영단어장">
 		<meta name="author" content="">
 		<title>voca4you</title>
-
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/slick.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -30,9 +31,10 @@
 				<div class="cont-wrap">
 					<div class="page-main">
 						<!-- 이용자 정보(레벨 몇 아는 단어 표기) -->
-						<div class="user-info">
+						<section class="user-info">
 							<div class="left">
-								<img src="./image/level01.png" alt="레벨-알"  class="img-level">
+								<img src="./image/ico-levelup.png" alt="레벨업"  class="level-up"> <!--  레벨업 시, 표기-->
+								<img src="./image/level05-1.png" alt="레벨-매(브론즈)"  class="img-level">
 								<!-- ## 레벨 이미지 ##
 								<img src="./image/level01.png" alt="레벨-알"  class="img-level">
 								<img src="./image/level02-1.png" alt="레벨-참새(브론즈)"  class="img-level">
@@ -68,13 +70,95 @@
 								<p>내가 아는 단어</p>
 								<p class="voca-num">865<span>개</span></p>
 							</div>	
-						</div>
-						<div class="voca-list">
+						</section>
+						<!-- 단어장 목록 -->
+						<section class="voca-list-wrap">
 							<div class="box-tit">
 								<h2>단어장 목록</h2>
-								<p class="more"><a href="">더보기 +</a></p>
+								<p class="red-notice">※ 1,250 단어장 제공중 </p>	
+								<a href="" class="more">더보기 +</a>
 							</div>
-						</div>
+							<div class="voca-list-cont">
+								<div id="voca-list" class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<img src="./image/ico-hot.png" alt="HOT"  class="ico-ribbon"> <!-- 인기 단어장일 경우 -->
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<img src="./image/ico-new.png" alt="NEW"  class="ico-ribbon"> <!-- 신규 단어장일 경우 -->
+												<p class="name">2023년 6월 고1 모의고사</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class=" voca-cont">
+												<p class="name">워드마스터 중등</p>
+												<!--marquee behavior="scroll" class="name">워드마스터 중등</marquee-->
+												<p class="num">1,200</p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+								</div>
+							</div>
+						</section>
+						<!-- 출석 -->
+						<section class="attend-wrap">
+							<div class="box-tit">
+								<h2>출석체크</h2>
+							</div>
+							<ul class="one-week">
+								<li><div>월</div></li>
+								<li><div>화</div></li>
+								<li><div>수</div></li>
+								<li><div>목</div></li>
+								<li><div>금</div></li>
+								<li><div>토</div></li>
+								<li><div>일</div></li>
+							</ul>
+						</section>
 					</div>
 				</div>
 				
@@ -116,5 +200,17 @@
 				<!-- 하단 메뉴: 고정 -->
 			</div>
 		</div>
+
+		<script src="./js/jquery-3.7.1.min.js" type="text/javascript"></script>
+		<script src="./js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 단어장 목록 리스트 제어
+			var swiper = new Swiper("#voca-list", {
+				slidesPerView:	2.5,
+				spaceBetween: 10,
+				pagination: false,
+			});
+		</script>
 	</body>
 </html>
