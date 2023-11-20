@@ -71,10 +71,20 @@ a{text-decoration: none; color: var(--color-txt01);}
 .page-main .user-info .right .voca-num{font-size: 13.8889vw; color: var(--color-main); font-family: var(--font-medium);}
 /* 단어장 목록 */
 .voca-list-cont .voca-cont{border: 0.1389vw solid var(--color-border); border-radius: 1.3889vw; position: relative; padding: 2.7778vw;}
-.voca-list-cont .voca-cont .name{font-family: var(--font-regular); font-size: 3.0556vw; margin-bottom: 1.3889vw;}
+.voca-list-cont .voca-cont .name{
+	font-family: var(--font-regular); font-size: 3.0556vw; margin-bottom: 1.3889vw; height: 3.4722vw; line-height: 3.4722vw;
+	overflow: hidden; white-space: nowrap; position: relative;
+}
+.voca-list-cont .voca-cont .name div.marquee{width: 100%; height: 3.4722vw; position: absolute; animation: marquee 4s 1s linear infinite;}
 .voca-list-cont .voca-cont .num{font-family: var(--font-medium); font-size: 4.1667vw; color: var(--color-main); margin-bottom: 6.9444vw;}
 .voca-list-cont .voca-cont .more{font-family: var(--font-regular); font-size: 2.5vw; color: var(--color-txt02);}
-.voca-list-cont .voca-cont .ico-ribbon{position: absolute; top: 0; right: 0; width: 10.6944vw; height: auto;}
+.voca-list-cont .voca-cont .ico-ribbon{position: absolute; top: 0; right: 0; width: 10.6944vw; height: auto; z-index: 2;}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
 /****  ****/
 @media (min-width: 721px) { /* PC 화면 */
 	.cont-wrap{padding: 40px 20px; margin-top: 86px;}
@@ -102,7 +112,8 @@ a{text-decoration: none; color: var(--color-txt01);}
 	.page-main .user-info .right .voca-num{font-size: 100px;}
 	/* 단어장 목록 */
 	.voca-list-cont .voca-cont{padding: 20px;}
-	.voca-list-cont .voca-cont .name{font-size: 22px; margin-bottom: 10px;}
+	.voca-list-cont .voca-cont .name{font-size: 22px; margin-bottom: 10px; height: 25px; line-height: 25px;}
+	.voca-list-cont .voca-cont .name div.marquee{height: 25px;}
 	.voca-list-cont .voca-cont .num{ font-size: 30px; margin-bottom: 50px;}
 	.voca-list-cont .voca-cont .more{font-size: 18px;}
 	.voca-list-cont .voca-cont .ico-ribbon{width: 77px;}
