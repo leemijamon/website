@@ -55,7 +55,7 @@
 								-->
 								<div class="level-name">
 									<img src="./image/ico-premium.png" alt="유료회원 표기"  class="ico-premium"> <!-- 유료회원일 경우 표기-->
-									<p>Egg(알)</p>
+									<p>Falcon(매)</p>
 									<!-- ## 레벨 명 ##
 									<p>Egg(알)</p>
 									<p>Sparrow(참새)</p>
@@ -85,9 +85,11 @@
 											<div class=" voca-cont">
 												<img src="./image/ico-hot.png" alt="HOT"  class="ico-ribbon"> <!-- 인기 단어장일 경우 -->
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
 												</div>
-												<p class="num">1,200</p>
+												<p class="num">800</p>
 												<a href="" class="more">자세히 보기 +</a>
 											</div>
 										</div>
@@ -95,7 +97,7 @@
 											<div class=" voca-cont">
 												<img src="./image/ico-new.png" alt="NEW"  class="ico-ribbon"> <!-- 신규 단어장일 경우 -->
 												<div class="name">
-													<div class="marquee">
+													<div class="marquee"> <!-- 단어장 이름이 길어질 경우 'marquee' 클래스 추가 -->
 														<p>2023년 6월 모의고사 영어단어 모음</p>
 													</div>
 												</div>
@@ -106,7 +108,9 @@
 										<div class="swiper-slide">
 											<div class=" voca-cont">
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
 												</div>
 												<p class="num">1,200</p>
 												<a href="" class="more">자세히 보기 +</a>
@@ -115,7 +119,9 @@
 										<div class="swiper-slide">
 											<div class=" voca-cont">
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
 												</div>
 												<p class="num">1,200</p>
 												<a href="" class="more">자세히 보기 +</a>
@@ -124,7 +130,9 @@
 										<div class="swiper-slide">
 											<div class=" voca-cont">
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
 												</div>
 												<p class="num">1,200</p>
 												<a href="" class="more">자세히 보기 +</a>
@@ -133,7 +141,9 @@
 										<div class="swiper-slide">
 											<div class=" voca-cont">
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
 												</div>
 												<p class="num">1,200</p>
 												<a href="" class="more">자세히 보기 +</a>
@@ -142,7 +152,9 @@
 										<div class="swiper-slide">
 											<div class=" voca-cont">
 												<div class="name">
-													<p>워드마스터 중등</p>
+													<div class="marquee"> <!-- 단어장 이름이 길어질 경우 'marquee' 클래스 추가 -->
+														<p>2023년 수능 관련 영어단어 모음집</p>
+													</div>
 												</div>
 												<p class="num">1,200</p>
 												<a href="" class="more">자세히 보기 +</a>
@@ -159,14 +171,91 @@
 								<h2>출석체크</h2>
 							</div>
 							<ul class="one-week">
+								<!-- 출석 체크 요일에 li 태그에 'on' 클랙스 추가 -->
 								<li><div>월</div></li>
 								<li><div>화</div></li>
-								<li><div>수</div></li>
-								<li><div>목</div></li>
+								<li class="on"><div>수</div></li> 
+								<li class="on"><div>목</div></li>
 								<li><div>금</div></li>
 								<li><div>토</div></li>
 								<li><div>일</div></li>
 							</ul>
+						</section>
+						<!-- 나의 단어장 -->
+						<section class="myvoca-list-wrap">
+							<div class="box-tit">
+								<h2>나의 단어장</h2>
+								<p class="red-notice">※ 무료회원 남은 단어장 7/10</p>	
+								<a href="" class="more">더보기 +</a>
+							</div>
+							<div class="myvoca-list-cont">
+								<div id="myvoca" class="swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="myvoca-cont add">
+												<a href="" class="myvoca-add">
+													<img src="./image/ico-plus.png" alt="나의 단어장 추가">
+												</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="myvoca-cont">
+												<div class="name">
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
+												</div>
+												<p class="num">800<span>(300)</span></p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="myvoca-cont">
+												<div class="name">
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
+												</div>
+												<p class="num">800<span>(300)</span></p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="myvoca-cont">
+												<div class="name">
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
+												</div>
+												<p class="num">800<span>(300)</span></p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="myvoca-cont">
+												<div class="name">
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
+												</div>
+												<p class="num">800<span>(300)</span></p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="myvoca-cont">
+												<div class="name">
+													<div>
+														<p>워드마스터 중등</p>
+													</div>
+												</div>
+												<p class="num">800<span>(300)</span></p>
+												<a href="" class="more">자세히 보기 +</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</section>
 					</div>
 				</div>
@@ -217,6 +306,12 @@
 			// 단어장 목록 리스트 제어
 			var swiper = new Swiper("#voca-list", {
 				slidesPerView:	2.5,
+				spaceBetween: 10,
+				pagination: false,
+			});
+			// 나의 단어장 리스트 제어
+			var swiper = new Swiper("#myvoca", {
+				slidesPerView:	2,
 				spaceBetween: 10,
 				pagination: false,
 			});
