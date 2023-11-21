@@ -15,6 +15,7 @@
 
 	/**** Color ****/
 	--color-main: #0ac5a8;
+	--color-sub: #e6f9f6;
 	--color-txt01: #333;
 	--color-txt02: #828282;
 	--color-red: #f75959;
@@ -34,6 +35,18 @@ a{text-decoration: none; color: var(--color-txt01);}
 .box-tit .more{font-family: var(--font-medium);  font-size: 2.7778vw; position: absolute; right: 2.7778vw; color: var(--color-txt02);}
 .box-tit .red-notice{margin-left: 1.3889vw;}
 .red-notice{display: inline-block; font-size: 2.5vw; color: var(--color-red); font-family: var(--font-regular);}
+
+/*
+## Layer Popup
+*/
+.laypop-wrap{width: 100%; height: 100%; position: fixed;  top: 0; left: 0; z-index: 4; display: none;}
+.laypop-wrap .dim-bg, .laypop-wrap .dim-bg02{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,.4);}
+.laypop-wrap .laypop-cont{width: 83.3333vw; padding: 5.5556vw; border-radius: 8px; background-color: #fff; position: absolute; top: 50%; left: 50%; box-sizing: border-box;}
+.laypop-wrap .laypop-cont .cont{}
+.laypop-wrap .laypop-cont .cont .pop-header{display: flex; align-items: center; justify-content: space-between; margin-bottom: 2.7778vw;}
+.laypop-wrap .laypop-cont .cont .pop-header h3{font-size: 3.8889vw; font-family: var(--font-bold);}
+.laypop-wrap .laypop-cont .cont .pop-header .btn-close{display: block; width: 4.1667vw; height: 4.1667vw; background: #fff url('../image/ico-close.png') 0 0 no-repeat; background-size: cover;}
+.laypop-wrap .laypop-cont .cont .pop-body{height: auto; max-height: 83.3333vw; overflow-y: auto;}
 
 /*
 ## Header: 상단고정 ## 
@@ -95,7 +108,36 @@ a{text-decoration: none; color: var(--color-txt01);}
 .myvoca-cont .more{font-family: var(--font-regular); font-size: 2.5vw; color: var(--color-txt02); position: absolute; bottom: 2.7778vw; left: 2.7778vw;}
 .myvoca-cont.add{display: flex; justify-content: center; align-items: center;}
 .myvoca-cont.add img{width: 8.8889vw; height: 8.8889vw;}
-
+/* Layer Popup: 출석체크 자세히 보기 */
+.calendar-wrap{margin-bottom: 20px;}
+.calendar-wrap .calendar-header{display: flex; justify-content: center; align-items: center; margin-bottom: 2.7778vw;}
+.calendar-wrap .calendar-header .month-prev{width: 2.0833vw; height: 3.4722vw; background: #fff url('../image/ico-arrow.png') center center no-repeat; background-size: cover;}
+.calendar-wrap .calendar-header .month-next{width: 2.0833vw; height: 3.4722vw; transform: scaleX(-1); background: #fff url('../image/ico-arrow.png') center center no-repeat; background-size: cover;}
+.calendar-wrap .calendar-header .month-txt{font-size: 3.6111vw; font-family: var(--font-bold); margin: 0 5.5556vw;}
+.calendar-wrap .calendar-body{}
+.calendar-wrap .calendar-body table{width: 100%;}
+.calendar-wrap .calendar-body table thead{background-color: var(--color-sub); border: 1px solid var(--color-border); border-width: 1px 0 1px 0;}
+.calendar-wrap .calendar-body table thead tr th{padding: 1.3889vw 0; font-size: 2.2222vw;}
+.calendar-wrap .calendar-body table tbody tr td{height: 13.8889vw; font-size: 2.2222vw; padding: 1.3889vw 0.6944vw; box-sizing: border-box; border-bottom: 1px solid var(--color-border); position: relative;}
+.calendar-wrap .calendar-body table tbody tr td.today::after{content: '오늘'; font-size: 2.2222vw; color: var(--color-main); position: absolute; padding-left: 0.6944vw;}
+.calendar-wrap .calendar-body table tbody tr td.attend::before{
+	content: ''; width: 6.25vw; height: 6.25vw; display: block; background: var(--color-main) url('../image/ico-attend.png') center center no-repeat; background-size: 60%; border-radius: 50%;
+	position: absolute; bottom: 2.0833vw; right: 50%; transform: translateX(50%); 	
+}
+.calendar-wrap .calendar-body table tbody tr td a{width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.calendar-etc{display: flex;}
+.calendar-etc .box-etc{background-color: #f3f2f7; border-radius: 8px;}
+.calendar-etc .level-box{width: 25vw; height: 23.6111vw; text-align: center; margin-right: 1.3889vw;}
+.calendar-etc .level-box p{padding-top: 2.7778vw; font-size: 2.5vw;  font-family: var(--font-medium);}
+.calendar-etc .level-box img{width: 16.6667vw;}
+.calendar-etc .level-box .level-info{width: 2.7778vw; height: 2.7778vw; display: inline-block; background: transparent url('../image/ico-info.png') 0 0 no-repeat; background-size: cover; transform: translateY(0.4167vw);}
+.calendar-etc .attend-box{width: calc(100% - 26.3889vw); display: flex; flex-direction: column; justify-content: space-between;}
+.calendar-etc .attend-box > div{height: 11.1111vw; padding: 0 5.5556vw; display: flex; align-items: center; justify-content: space-between;}
+.calendar-etc .attend-box > div p{font-size: 2.5vw; font-family: var(--font-medium);}
+.calendar-etc .attend-box > div p.num{font-size: 5.5556vw; color: var(--color-main);}
+.today-voca-info{width: 100%; display: flex; background-color: var(--color-sub); border-radius: 8px; padding: 30px 0;}
+.today-voca-info .left{width: 50%; text-align: center;} 
+.today-voca-info .right{width: 50%; text-align: center;}
 
 /* Animation: 텍스트 롤링 효과 */
 @keyframes marquee { 
@@ -112,6 +154,12 @@ a{text-decoration: none; color: var(--color-txt01);}
 	.box-tit .more{font-size: 20px; right: 20px;}
 	.box-tit .red-notice{margin-left: 10px;}
 	.red-notice{font-size: 18px;}
+	/* Layer Popup */
+	.laypop-wrap .laypop-cont{width: 600px; padding: 40px;}
+	.laypop-wrap .laypop-cont .cont .pop-header{ margin-bottom: 20px;}
+	.laypop-wrap .laypop-cont .cont .pop-header h3{font-size: 28px;}
+	.laypop-wrap .laypop-cont .cont .pop-header .btn-close{width: 30px; height: 30px;}
+	.laypop-wrap .laypop-cont .cont .pop-body{max-height: 600px;}
 	/* Header: 상단고정 */
 	.header-wrap .cont{padding: 20px 40px;}
 	.header-wrap .btn-mypage{width: 45px;}
@@ -149,4 +197,22 @@ a{text-decoration: none; color: var(--color-txt01);}
 	.myvoca-cont .num span{font-size: 18px; margin-left: 5px;}
 	.myvoca-cont .more{font-size: 18px; bottom: 20px; left: 20px;}
 	.myvoca-cont.add img{width: 64px; height: 64px;}
+	/* Layer Popup: 출석체크 자세히 보기 */
+	.calendar-wrap{margin-bottom: 20px;}
+	.calendar-wrap .calendar-header{margin-bottom: 20px;}
+	.calendar-wrap .calendar-header .month-prev{width: 15px; height: 25px;}
+	.calendar-wrap .calendar-header .month-next{width: 15px; height: 25px;}
+	.calendar-wrap .calendar-header .month-txt{font-size: 26px;margin: 0 40px;}
+	.calendar-wrap .calendar-body table thead tr th{padding: 10px 0; font-size: 16px;}
+	.calendar-wrap .calendar-body table tbody tr td{height: 100px; padding: 10px 5px; font-size: 16px;}
+	.calendar-wrap .calendar-body table tbody tr td.today::after{padding-left: 5px; font-size: 16px;}
+	.calendar-wrap .calendar-body table tbody tr td.attend::before{width: 45px; height: 45px; bottom: 15px;}
+	.calendar-etc .level-box{width: 180px; height: 170px; margin-right: 10px;}
+	.calendar-etc .level-box p{padding-top: 20px; font-size: 18px; }
+	.calendar-etc .level-box img{width: 120px;}
+	.calendar-etc .level-box .level-info{width: 20px; height: 20px; transform: translateY(3px);}
+	.calendar-etc .attend-box{width: calc(100% - 190px); }
+	.calendar-etc .attend-box > div{height: 80px; padding: 0 40px;}
+	.calendar-etc .attend-box > div p{font-size: 18px;}
+	.calendar-etc .attend-box > div p.num{font-size: 40px;}
 }
