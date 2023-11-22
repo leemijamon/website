@@ -83,3 +83,10 @@ function in_layer_popup(el){
 	});
 
 }
+
+/*
+## 뒤로가기 ##
+*/
+function goBack(){
+	window.history.back();
+}
