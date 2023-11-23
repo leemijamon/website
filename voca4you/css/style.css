@@ -59,6 +59,8 @@ a{text-decoration: none; color: var(--color-txt01);}
 ## Button Style
 */
 .btn{width: 100%; line-height: 9.0278vw; color: #fff; background-color: var(--color-main); display: block; text-align: center; border-radius: 5.5556vw; font-size: 3.3333vw; font-family: var(--font-medium);}
+.btn.goust{background-color: transparent; color: var(--color-main); border: 1px solid var(--color-main); box-sizing: border-box;}
+.btn.square{border-radius: 8px;}
 
 /*
 ## Box 형 Menu
@@ -74,6 +76,21 @@ a{text-decoration: none; color: var(--color-txt01);}
 .menu-box .items .menu-name{font-size: 3.3333vw; font-family: var(--font-medium);}
 .menu-box .items .menu-des{font-size: 2.7778vw; color: var(--color-txt02); margin-top: 1.3889vw;}
 .menu-box .btn-menu{width: 2.9167vw; height: auto; transform: scaleX(-1);}
+.menu-box-wrap.none-icon{padding: 0 2.7778vw;}
+.menu-box-wrap.none-icon .menu-box .items{padding: 5.5556vw;}
+.menu-box-wrap.none-icon .menu-box .items div::before{display: none;}
+
+/*
+## 입력박스
+*/
+.input-style{width: 100%; border: 1px solid var(--color-border); padding: 25px;  box-sizing: border-box; font-size: 20px; word-break: keep-all; border-radius: 8px; font-family: var(--font-regular);}
+.input-style::placeholder {color: var(--color-txt02); font-size: 20px;  font-family: var(--font-regular); line-height: 30px;}
+textarea.input-style{resize: vertical;}
+.input-style:focus{outline: none; background-color: var(--color-sub);}
+.write-wrap{margin-bottom: 30px;}
+.write-wrap:last-child{margin-bottom: 0;}
+.write-wrap .label-vertical{font-size: 24px;  font-family: var(--font-medium); margin-bottom: 20px;}
+.write-wrap .label-vertical::after{content: '*'; color: var(--color-red); padding-left: 5px;}
 
 /*
 ## Header: 상단고정 ## 
@@ -200,6 +217,18 @@ a{text-decoration: none; color: var(--color-txt01);}
 .box-pay .info-pay .pay p{font-size: 2.5vw; color: var(--color-txt02);}
 .box-pay .info-pay .pay p.buy{font-size: 4.1667vw; font-family: var(--font-bold); color: var(--color-txt01); margin: 0.6944vw 0 1.3889vw;}
 .box-pay .dday-txt{font-size: 2.5vw; margin-top: 1.3889vw;}
+/* 멤버십 결제내역 */
+.pay-list-table{width: 100%; text-align: center; font-size: 2.7778vw;}
+.pay-list-table tr:nth-child(even){background-color: var(--color-sub);}
+.pay-list-table tr th, .pay-list-table tr td{padding: 2.7778vw 0; vertical-align: middle;}
+.pay-list-table thead{background-color: var(--color-main);}
+.pay-list-table tr th{color: #fff;}
+.pay-list-table tr td a img{width: 4.1667vw; height: auto;}
+.pay-info-detail{width: 100%; font-size: 2.7778vw;}
+.pay-info-detail tr th, .pay-info-detail tr td{padding: 1.3889vw 0;}
+.pay-info-detail tr th{text-align: left; color: var(--color-txt02);}
+/* 문의하기 */
+
 
 /****  ****/
 @media (min-width: 721px) { /* PC 화면 */
@@ -225,6 +254,8 @@ a{text-decoration: none; color: var(--color-txt01);}
 	.menu-box .items .menu-name{font-size: 24px;}
 	.menu-box .items .menu-des{font-size: 20px; margin-top: 10px;}
 	.menu-box .btn-menu{width: 21px;}
+	.menu-box-wrap.none-icon{padding: 0 20px;}
+	.menu-box-wrap.none-icon .menu-box .items{padding: 40px;}
 	/* Header: 상단고정 */
 	.header-wrap .cont{padding: 20px 40px;}
 	.header-wrap .btn-mypage{width: 45px;}
@@ -304,4 +335,10 @@ a{text-decoration: none; color: var(--color-txt01);}
 	.box-pay .info-pay .pay p{font-size: 18px;}
 	.box-pay .info-pay .pay p.buy{font-size: 30px; margin: 5px 0 10px;}
 	.box-pay .dday-txt{font-size: 18px; margin-top: 10px;}
+	/* 멤버십 결제내역 */
+	.pay-list-table{font-size: 20px;}
+	.pay-list-table tr th, .pay-list-table tr td{padding: 20px 0;}
+	.pay-list-table tr td a img{width: 30px; height: auto;}
+	.pay-info-detail{ font-size: 20px;}
+	.pay-info-detail tr th, .pay-info-detail tr td{padding: 10px 0;}
 }

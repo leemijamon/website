@@ -22,67 +22,34 @@
 						<a onclick="goBack();">
 							<img src="../image/ico-arrow.png" alt="뒤로가기" class="btn-back">
 						</a>
-						<h1 class="page-name">멤버십 결제내역</h1>
+						<h1 class="page-name">문의하기</h1>
 					</div>
 				</header>	
 				<!--# Sub Header: 고정 #-->
 
 				<!--#  컨텐츠 영역 #-->
 				<div class="cont-wrap">
-					<div class="page-my-membership">
-						<section class="pay-list">
-							<table class="pay-list-table" cellpadding="0" cellspacing="0">
-								<colgroup>
-									<col width="25%">
-									<col width="25%">
-									<col width="25%">
-									<col width="25%">
-								</colgroup>
-								<thead>
-									<tr>
-										<th>결제일</th>
-										<th>결제금액</th>
-										<th>결제상태</th>
-										<th>구매정보</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>2023-07-10</td>
-										<td align="right">59,000</td>
-										<td>결제완료</td>
-										<td>
-											<a href="#pay-detail" class="btn-open"><img src="../image/ico-detail.png" alt="자세히 보기"></a>
-										</td>
-									</tr>
-									<tr>
-										<td>2023-08-10</td>
-										<td align="right">9,900</td>
-										<td>입금대기</td>
-										<td><a href="#pay-detail" class="btn-open"><img src="../image/ico-detail.png" alt="자세히 보기"></a></td>
-									</tr>
-									<tr>
-										<td>2023-08-10</td>
-										<td align="right">9,900</td>
-										<td>입금대기</td>
-										<td><a href="#pay-detail" class="btn-open"><img src="../image/ico-detail.png" alt="자세히 보기"></a></td>
-									</tr>
-									<tr>
-										<td>2023-07-10</td>
-										<td align="right">59,000</td>
-										<td>결제완료</td>
-										<td>
-											<a href="#pay-detail" class="btn-open"><img src="../image/ico-detail.png" alt="자세히 보기"></a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
+					<div class="page-inquiry-write">
+						<section>
+							<form action="">	
+								<div class="write-wrap">
+									<p class="label-vertical">제목</p>
+									<input type="text" class="input-style" placeholder="제목을 입력해주세요.">
+								</div>
+								<div class="write-wrap">
+									<p class="label-vertical">내용</p>
+									<textarea name="inquiry-cont" id="" cols="30" rows="10" class="input-style" placeholder="문의할 내용을 입력해주세요.  &#13;&#10;사진을 첨부해주시면 더욱 정확한 답변이 가능합니다."></textarea>	
+								</div>
+								<div class="file-box">
+									<input type="file" class="btn goust square">		
+								</div>
+								</form>
 						</section>
 					</div>
 				</div>
 				
 				<!--# 하단 메뉴: 고정 #-->
-				<div class="menu-bottom">
+				<div class="menu-bottom" style="display: none;">
 					<ul>
 						<li>
 							<a href="">
@@ -120,44 +87,17 @@
 			</div>
 		</div>
 
-		<!-- 레이어 팝업: 구매정보 아이콘 클릭시 노출 -->
+		<!-- 레이어 팝업:  -->
 		<div class="layer-open laypop-wrap">
 			<div class="dim-bg"></div>
 			<div id="pay-detail" class="laypop-cont">
 				<div class="cont">
 					<div class="pop-header">
-						<h3>구매정보</h3>
+						<h3>타이틀 영역</h3>
 						<a href="" class="btn-close"></a>
 					</div>
 					<div class="pop-body">
-						<table class="pay-info-detail" cellpadding="0" cellspacing="0">
-							<tbody>
-								<tr>
-									<th>이름</th>
-									<td>김채규</td>
-								</tr>
-								<tr>
-									<th>주문번호</th>
-									<td>2023091115770556</td>
-								</tr>
-								<tr>
-									<th>결제항목</th>
-									<td>프리미엄 멤버십 1년권</td>
-								</tr>
-								<tr>
-									<th>PG 결제금액</th>
-									<td>신용카드 (현대 4444***)</td>
-								</tr>
-								<tr>
-									<th>결제일</th>
-									<td>2023-09-11 15:20:12</td>
-								</tr>
-								<tr>
-									<th>결제상태</th>
-									<td>결제완료</td>
-								</tr>
-							</tbody>
-						</table>
+
 					</div>
 				</div>
 			</div>
