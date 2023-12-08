@@ -93,3 +93,57 @@ $(function () {
 function goBack(){
 	window.history.back();
 }
+
+/*
+## 프리미엄 박스 선택 활성화 ##
+*/
+$(function () {
+	$('.box-on').click(function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on');
+		} else {
+			$(this).addClass('on');
+			$(this).siblings().removeClass('on');
+		}
+	});
+});
+
+/*
+## 단어 테이블 선택 활성화
+*/
+$(function () {
+	$('.word-table tbody tr').click(function(){
+		if($(this).hasClass('on')){
+			$(this).removeClass('on');
+		} else {
+			$(this).addClass('on');
+			$(this).siblings().removeClass('on');
+		}
+	});
+});
+
+/*
+## 체크박스 전체선택
+*/
+function selectAll(selectAll)  {
+  const checkboxes 
+       = document.getElementsByName('word');
+  
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = selectAll.checked;
+  })
+};
+
+/*
+## 내가 아는 단어 영어, 뜻 가리기
+*/
+$(".word-hidden ul li").on("click", function(){
+  if($(this).hasClass('on')){
+		$(this).removeClass('on');
+		$('.word-table tbody tr td').removeClass('hidden');
+	} else {
+		$(this).addClass('on');
+		$(this).siblings().removeClass('on');
+		$('.word-table tbody tr td').addClass('hidden');
+	}
+});
