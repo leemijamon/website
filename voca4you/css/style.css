@@ -86,7 +86,7 @@ h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
 ## Text Button
 */
 .txt-btn-wrap{display: flex; align-items: center; justify-content: center;}
-.txt-btn-wrap li{font-size: 2.7778vw; font-family: var(--font-regular); padding: 0 2.0833vw; text-align: center; position: relative;}
+.txt-btn-wrap li{font-size: 2.7778vw; font-family: var(--font-regular); padding: 0 2.0833vw; text-align: center; position: relative; cursor: pointer;}
 .txt-btn-wrap li a{color: var(--color-txt02);}
 .txt-btn-wrap li::after{content: '|'; position: absolute; right: 0; color: var(--color-txt02);}
 .txt-btn-wrap li:last-child::after{display: none;}

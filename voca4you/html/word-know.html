@@ -34,8 +34,8 @@
 						<section>
 							<div class="word-hidden">
 								<ul class="txt-btn-wrap">
-									<li class="eng">영어 가리기</li>
-									<li class="mean">뜻 가리기</li>
+									<li class="eng" onclick="engHidden();">영어 가리기</li>
+									<li class="mean" onclick="meanHidden();">뜻 가리기</li>
 								</ul>
 							</div>
 							<div>
@@ -61,8 +61,8 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>effect</td>
-											<td>결과, 영향, 효과</td>
+											<td class="td01">effect</td>
+											<td class="td02">결과, 영향, 효과</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -72,8 +72,8 @@
 											</td>
 										</tr>
 										<tr>
-											<td>competition</td>
-											<td>경쟁</td>
+											<td class="td01">competition</td>
+											<td class="td02">경쟁</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -83,8 +83,8 @@
 											</td>
 										</tr>
 										<tr>
-											<td>gift</td>
-											<td>선물, 타고난 재능</td>
+											<td class="td01">gift</td>
+											<td class="td02">선물, 타고난 재능</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -94,8 +94,8 @@
 											</td>
 										</tr>
 										<tr>
-											<td>cookie</td>
-											<td>쿠키, 맛있는 작은 과자</td>
+											<td class="td01">cookie</td>
+											<td class="td02">쿠키, 맛있는 작은 과자</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -105,8 +105,8 @@
 											</td>
 										</tr>
 										<tr>
-											<td>communication</td>
-											<td>전달, 교통</td>
+											<td class="td01">communication</td>
+											<td class="td02">전달, 교통</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -116,8 +116,8 @@
 											</td>
 										</tr>
 										<tr>
-											<td>to the best of my knowledge</td>
-											<td>만약 ~인 경우에는, 만일 ~이면; 만일에 대비하여</td>
+											<td class="td01">to the best of my knowledge</td>
+											<td class="td02">만약 ~인 경우에는, 만일 ~이면; 만일에 대비하여</td>
 											<td align="center"><img src="../image/ico-dictionary.png" alt="영어사전 아이콘"></td>
 											<td align="center">
 												<div class="chk-wrap">
@@ -173,6 +173,30 @@
 		<script src="../js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/main.js" type="text/javascript"></script>
+		<script>
+			/* ## 영어, 뜻 가리기 ## */
+			function engHidden(){
+				$('.word-table .td02').removeClass('hidden');
 
+				if ($('.word-table .td01').hasClass('hidden'))
+				{
+					$('.word-table .td01').removeClass('hidden');
+				}
+				else{
+					$('.word-table .td01').addClass('hidden');
+				}
+			}
+			function meanHidden(){
+				$('.word-table .td01').removeClass('hidden');
+
+				if ($('.word-table .td02').hasClass('hidden'))
+				{
+					$('.word-table .td02').removeClass('hidden');
+				}
+				else{
+					$('.word-table .td02').addClass('hidden');
+				}
+			}
+		</script>
 	</body>
 </html>
