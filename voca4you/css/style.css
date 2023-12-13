@@ -27,6 +27,10 @@
 
 	/**** Shadow ****/
 	--box-shadow: 0 0 3px rgba(0,0,0,.1);
+
+	/**** div Center Align ****/
+	--center-half: 50%;
+	--center-translateX: translateX(-50%);
 }
 
 /*
@@ -34,7 +38,7 @@
 */
 body, html{font-family: var(--font-regular); color: var(--color-txt01);} 
 a{text-decoration: none; color: var(--color-txt01);}
-.container{max-width: 720px; margin: 0 auto; padding-bottom: 18.5185vw;}
+.container{max-width: 720px; margin: 0 auto; padding-bottom: 18.5185vw; position: relative;}
 .container.bottom-none{padding-bottom: 0;}
 .cont-wrap{padding: 5.5556vw 2.7778vw; margin-top: 10.8333vw;}
 .box-tit{margin: 5.5556vw 0 1.3889vw 0; padding: 0 2.7778vw; display: flex; align-items: center; position: relative;}
@@ -48,7 +52,7 @@ a{text-decoration: none; color: var(--color-txt01);}
 .notice-box p{font-size: 2.5vw; color: var(--color-txt01); line-height: 1.2;}
 .txt-default{font-size: 2.7778vw; line-height: 1.4; word-break: keep-all;}
 .txt-red{color: var(--color-red);}
-h2.page-tit{font-size: 28px; font-family: var(--font-bold); margin-bottom: 20px;}
+h2.page-tit{font-size: 3.8889vw; font-family: var(--font-bold); margin-bottom: 2.7778vw;}
 h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
 
 /*
@@ -76,11 +80,11 @@ h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
 ## Button Style
 */
 .btn{width: 100%; line-height: 9.7222vw; color: #fff; background-color: var(--color-main); display: block; text-align: center; border-radius: 5.5556vw; font-size: 3.8889vw; font-family: var(--font-medium); border: 0;}
-.btn.middle{line-height: 6.9444vw; font-size: 3.3333vw; font-family: var(--font-redular);}
+.btn.middle{line-height: 6.9444vw; font-size: 2.7778vw; font-family: var(--font-redular);}
 .btn.goust{background-color: transparent; color: var(--color-main); border: 1px solid var(--color-main); box-sizing: border-box;}
 .btn.square{border-radius: 1.1111vw;}
 .btn.red{background-color: var(--color-red);}
-.btn.auto{width: auto; display: inline-block; padding: 0 20px;}
+.btn.auto{width: auto; display: inline-block; padding: 0 2.7778vw;}
 
 /*
 ## Text Button
@@ -147,6 +151,20 @@ textarea.input-style{resize: vertical;}
 .menu-bottom ul li{width: 25%; text-align: center;}
 .menu-bottom ul li a img{width: auto; height: 6.25vw; display: block; margin: 0 auto;}
 .menu-bottom ul li a p{font-size: 3.0556vw; margin-top: 2.0833vw;}
+.menu-bottom.play-menu-wrap{padding: 0;}
+.play-menu-cont{background-color: var(--color-main); padding: 2.0833vw 5.5556vw; position: relative;}
+.play-menu-cont button{background-color: transparent; border: 0; width: 6.9444vw; height: 6.9444vw; padding: 0; display: inline-block;}
+.play-menu-cont button img{width: 100%; height: auto;}
+.play-menu-cont .btn-wrap{width: 100%; text-align: center;}
+.play-menu-cont .btn-prev{margin-right: 1.3889vw;}
+.play-menu-cont .btn-next{margin-left: 1.3889vw;}
+.play-menu-cont .btn-next img{ transform: scaleX(-1);}
+.play-menu-cont .btn-setting{position: absolute; right: 5.5556vw; top: 2.0833vw;}
+
+/*
+## Fade Out Banner
+*/
+.fadeout-bannre{width: 94.4444vw; margin: 0 auto; text-align: center; padding: 4.1667vw 0; font-size: 2.7778vw; border-radius: 1.1111vw; box-shadow: 3px 3px 5px rgba(0,0,0,.1); background-color: var(--color-sub01); position: fixed; bottom: 19.4444vw;left: var(--center-half); transform: var(--center-translateX); animation: fadeOut 1s 2s forwards;}
 
 /*
 ## Check, Radio Box 
@@ -246,6 +264,11 @@ textarea.input-style{resize: vertical;}
   100% { left: -100%; }
 }
 
+@keyframes fadeOut { 
+  0% { opacity: 1; }
+  100% { opacity: 0; bottom: 0;}
+}
+
 /*
 ## 마이페이지 
 */
@@ -336,18 +359,18 @@ textarea.input-style{resize: vertical;}
 .word-hidden .txt-btn-wrap{justify-content: flex-end;}
 .word-hidden .txt-btn-wrap li a{color: var(--color-txt01);}
 .word-hidden .txt-btn-wrap li.on{color: var(--color-main); font-family: var(--font-bold);}
-.word-table{width: 100%; font-size: 20px; margin: 20px 0;}
+.word-table{width: 100%; font-size: 2.7778vw; margin: 2.7778vw 0;}
 .word-table thead{background-color: var(--color-box); font-family: var(--font-medium);}
-.word-table thead tr th{padding: 15px 0; text-align: center; vertical-align: middle;}
-.word-table tbody tr td{padding: 15px 0; border-bottom: 1px solid var(--color-border); vertical-align: middle; line-height: 1.2; word-break: keep-all;}
-.word-table tbody tr td:first-child{padding-left: 20px;}
-.word-table tbody tr td img{cursor: pointer; width: 35px; height: auto;}
+.word-table thead tr th{padding: 2.0833vw 0; text-align: center; vertical-align: middle;}
+.word-table tbody tr td{padding: 2.0833vw 0; border-bottom: 1px solid var(--color-border); vertical-align: middle; line-height: 1.2; word-break: keep-all;}
+.word-table tbody tr td:first-child{padding-left: 2.7778vw;}
+.word-table tbody tr td img{cursor: pointer; width: 4.8611vw; height: auto;}
 .word-table tbody tr td .chk-wrap{display: flex; align-items: center; justify-content: center;}
 .word-table tbody tr.on td{background-color: var(--color-sub01);}
 .word-table tbody tr td.hidden{font-size: 0;}
 .word-table .chk-wrap label{font-size: 0;}
-.word-table .chk-wrap input[type="checkbox"] + label{padding-left: 30px;}
-.table-btn{display: flex; justify-content: flex-end; padding: 0 20px;}
+.word-table .chk-wrap input[type="checkbox"] + label{padding-left: 5.5556vw;}
+.table-btn{display: flex; justify-content: flex-end; padding: 0 2.7778vw;}
 
 /**** PC화면 대비 ****/
 @media (min-width: 721px) {
@@ -362,6 +385,7 @@ textarea.input-style{resize: vertical;}
 	.notice-box{padding: 20px; margin: 20px 0;}
 	.notice-box p{font-size: 18px;}
 	.txt-default{font-size: 20px;}
+	h2.page-tit{font-size: 28px; margin-bottom: 20px;}
 	/* Layer Popup */
 	.laypop-wrap .cont-style{width: 600px; border-radius: 8px;}
 	.laypop-wrap .cont-style .cont .pop-header{padding: 40px;}
@@ -377,6 +401,8 @@ textarea.input-style{resize: vertical;}
 	/* Button */
 	.btn{line-height: 60px; border-radius: 40px; font-size: 22px;}
 	.btn.middle{line-height: 40px; font-size: 20px;}
+	.btn.square{border-radius: 8px;}
+	.btn.auto{padding: 0 20px;}
 	/* Text Button */
 	.txt-btn-wrap li{font-size: 20px; padding: 0 15px;}
 	/* Box 형 Menu*/
@@ -401,6 +427,15 @@ textarea.input-style{resize: vertical;}
 	.menu-bottom{padding: 10px 0;}
 	.menu-bottom ul li a img{height: 40px;}
 	.menu-bottom ul li a p{font-size: 18px; margin-top: 15px;}
+	.menu-bottom.play-menu-wrap{padding: 0;}
+	.play-menu-cont{padding: 15px 40px;}
+	.play-menu-cont button{width: 50px; height: 50px; }
+	.play-menu-cont button img{width: 100%;}
+	.play-menu-cont .btn-prev{margin-right: 10px;}
+	.play-menu-cont .btn-next{margin-left: 10px;}
+	.play-menu-cont .btn-setting{right: 40px; top: 15px;}
+	/* Fade Out Banner */
+	.fadeout-bannre{width: 680px; padding: 30px 0; font-size: 20px; border-radius: 8px; bottom: 140px;}
 	/* Checkbox & Radio */
 	.chk-wrap input[type="checkbox"] + label{background-size: 30px 30px; line-height: 30px; padding-left: 40px;}
 	.chk-wrap input[type="checkbox"]:checked + label{background-size: 30px 30px;}
@@ -523,4 +558,12 @@ textarea.input-style{resize: vertical;}
 	.page-permium .pay-list{margin-bottom: 40px;}
 	.page-permium section{margin-bottom: 100px;}
 	.use-area{padding: 40px 20px;}
+	/* 내가 아는 단어 */
+	.word-table{font-size: 20px; margin: 20px 0;}
+	.word-table thead tr th{padding: 15px 0;}
+	.word-table tbody tr td{padding: 15px 0;}
+	.word-table tbody tr td:first-child{padding-left: 20px;}
+	.word-table tbody tr td img{width: 35px;}
+	.word-table .chk-wrap input[type="checkbox"] + label{padding-left: 30px;}
+	.table-btn{display: flex; justify-content: flex-end; padding: 0 20px;}
 }
