@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="voca4you">
+		<meta name="keyword" content="영어, 영단어, 단어장">
+		<meta name="description" content="중고등 필수 영단어장">
+		<meta name="author" content="">
+		<title>voca4you</title>
+		<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="../css/slick.css">
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="container">
+				<!--# Sub Header: 고정 #-->
+				<header class="header-wrap">
+					<div class="cont">
+						<a onclick="goBack();">
+							<img src="../image/ico-arrow.png" alt="뒤로가기" class="btn-back">
+						</a>
+						<h1 class="page-name">마이페이지</h1>
+					</div>
+				</header>	
+				<!--# Sub Header: 고정 #-->
+
+				<!--#  컨텐츠 영역 #-->
+				<div class="cont-wrap">
+					<div class="page-my">
+						<!-- 유저정보 -->
+						<section class="user-info">
+							<img src="../image/level01.png" alt="레벨-알"  class="img-level">
+							<!-- 레벨 이미지 
+							<img src="../image/level01.png" alt="레벨-알"  class="img-level">
+							<img src="../image/level02-1.png" alt="레벨-참새(브론즈)"  class="img-level">
+							<img src="../image/level02-2.png" alt="레벨-참새(실버)"  class="img-level">
+							<img src="../image/level02-3.png" alt="레벨-참새(골드)"  class="img-level">
+							<img src="../image/level03-1.png" alt="레벨-까치(브론즈)"  class="img-level">
+							<img src="../image/level03-2.png" alt="레벨-까치(실버)"  class="img-level">
+							<img src="../image/level03-3.png" alt="레벨-까치(골드)"  class="img-level">
+							<img src="../image/level04-1.png" alt="레벨-학(브론즈)"  class="img-level">
+							<img src="../image/level04-2.png" alt="레벨-학(실버)"  class="img-level">
+							<img src="../image/level04-3.png" alt="레벨-학(골드)"  class="img-level">
+							<img src="../image/level05-1.png" alt="레벨-매(브론즈)"  class="img-level">
+							<img src="../image/level05-2.png" alt="레벨-매(실버)"  class="img-level">
+							<img src="../image/level05-3.png" alt="레벨-매(골드)"  class="img-level">
+							<img src="../image/level06-1.png" alt="레벨-독수리(브론즈)"  class="img-level">
+							<img src="../image/level06-2.png" alt="레벨-독수리(실버)"  class="img-level">
+							<img src="../image/level06-3.png" alt="레벨-독수리(골드)"  class="img-level">
+							-->
+							<div class="level-name">
+								<img src="../image/ico-premium.png" alt="유료회원 표기"  class="ico-premium"> <!-- 유료회원일 경우 표기-->
+								<p>Egg(알)</p>
+								<!--  레벨 명 
+								<p>Egg(알)</p>
+								<p>Sparrow(참새)</p>
+								<p>Magpie(까치)</p>
+								<p>Stork(학)</p>
+								<p>Falcon(매)</p>
+								<p>Eagle(독수리)</p>
+								-->
+							</div>
+							<!-- CASE: 프리미엄 결제 X 
+							<a href="" class="btn btn-premium"><img src="../image/ico-premium.png" alt="프리미엄 아이콘">프리미엄 결제하기</a>-->
+
+							<!-- CASE: 프리미엄 결제 O -->
+							<div class="my-premium">
+								<div class="box-pay">
+									<div class="badge-wrap">
+										<span class="badge badge01">프리미엄 이용중</span>
+									</div>
+									<div class="info-pay">
+										<div class="month">
+											1개월
+										</div>
+										<div class="pay">
+											<p class="buy">&#8361; 9,900</p>
+										</div>
+									</div>
+									<p class="dday-txt">2024년 5월 31일까지 (D-30)</p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="menu-box-wrap">
+								<ul class="menu-box">
+									<li class="items item01">
+										<div>
+											<p class="menu-name">멤버십 결제 내역</p>
+											<p class="menu-des">결제 내역 확인</p>
+										</div>
+										<a href=""><img src="../image/ico-arrow.png" alt="페이지 이동" class="btn-menu"></a>
+									</li>
+									<li class="items item02">
+										<div>
+											<p class="menu-name">고객지원</p>
+											<p class="menu-des">1:1 문의</p>
+										</div>
+										<a href=""><img src="../image/ico-arrow.png" alt="페이지 이동" class="btn-menu"></a>
+									</li>
+									<li class="items item03">
+										<div>
+											<p class="menu-name">계정 관리</p>
+											<p class="menu-des">로그아웃, 탈퇴하기</p>
+										</div>
+										<a href=""><img src="../image/ico-arrow.png" alt="페이지 이동" class="btn-menu"></a>
+									</li>
+									<li class="items item04">
+										<div>
+											<p class="menu-name">업데이트 히스토리</p>
+											<p class="menu-des">앱 버전: 1.0</p>
+										</div>
+										<a href=""><img src="../image/ico-arrow.png" alt="페이지 이동" class="btn-menu"></a>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</div>
+				</div>
+				
+				<!--# 하단 메뉴: 고정 #-->
+				<div class="menu-bottom">
+					<ul>
+						<li>
+							<a href="">
+								<img src="../image/ico-menu-home.png" alt="홈">
+								<p>홈</p>
+							</a>	
+						</li>
+						<li>
+							<a href="">
+								<img src="../image/ico-menu-list.png" alt="단어장 목록">
+								<p>단어장 목록</p>
+							</a>	
+						</li>
+						<li>
+							<a href="">
+								<img src="../image/ico-menu-book.png" alt="나의 단어장">
+								<p>나의 단어장</p>
+							</a>	
+						</li>
+						<li>
+							<a href="">
+								<img src="../image/ico-menu-memory.png" alt="암기">
+								<p>암기</p>
+							</a>	
+						</li>
+						<li>
+							<a href="">
+								<img src="../image/ico-menu-premium.png" alt="프리미엄">
+								<p>프리미엄</p>
+							</a>	
+						</li>
+					</ul>
+				</div>
+				<!-- 하단 메뉴: 고정 -->
+			</div>
+		</div>
+
+		<!-- 레이어 팝업: 출석체크 클릭 시 노출 -->
+		<div class="layer-open laypop-wrap">
+			<div class="dim-bg"></div>
+			<div id="lay01" class="laypop-cont">
+				<div class="cont">
+					<div class="pop-header">
+						<h3>출석체크</h3>
+						<a href="" class="btn-close"></a>
+					</div>
+					<div class="pop-body">
+						<div class="calendar-wrap">
+							<div class="calendar-header">
+								<div class="month-prev"></div>
+								<div class="month-txt">2023.11</div>
+								<div class="month-next"></div>
+							</div>
+							<div class="calendar-body">
+								<table cellpadding="0" cellspacing="0">
+									<thead>
+										<tr>
+											<th class="sun">일</th>
+											<th>월</th>
+											<th>화</th>
+											<th>수</th>
+											<th>목</th>
+											<th>금</th>
+											<th class="sat">토</th>
+										</tr>	
+									</thead>
+									<tbody>
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td>1<a href="#lay02" class="btn-open-in"></a></td>
+											<td>2<a href="#lay02" class="btn-open-in"></a></td>
+											<td>3<a href="#lay02" class="btn-open-in"></a></td>
+											<td>4<a href="#lay02" class="btn-open-in"></a></td>
+										</tr>
+										<tr>
+											<td>5<a href="#lay02" class="btn-open-in"></a></td>
+											<td>6<a href="#lay02" class="btn-open-in"></a></td>
+											<td>7<a href="#lay02" class="btn-open-in"></a></td>
+											<td>8<a href="#lay02" class="btn-open-in"></a></td>
+											<td>9<a href="#lay02" class="btn-open-in"></a></td>
+											<td>10<a href="#lay02" class="btn-open-in"></a></td>
+											<td>11<a href="#lay02" class="btn-open-in"></a></td>
+										</tr>
+										<tr>
+											<td>12<a href="#lay02" class="btn-open-in"></a></td>
+											<td>13<a href="#lay02" class="btn-open-in"></a></td>
+											<td>14<a href="#lay02" class="btn-open-in"></a></td>
+											<td>15<a href="#lay02" class="btn-open-in"></a></td>
+											<td>16<a href="#lay02" class="btn-open-in"></a></td>
+											<td>17<a href="#lay02" class="btn-open-in"></a></td>
+											<td>18<a href="#lay02" class="btn-open-in"></a></td>
+										</tr>
+										<tr>
+											<td>19<a href="#lay02" class="btn-open-in"></a></td>
+											<td>20<a href="#lay02" class="btn-open-in"></a></td>
+											<td class="today">21<a href="#lay02" class="btn-open-in"></a></td>
+											<td class="attend">22<a href="#lay02" class="btn-open-in"></a></td>
+											<td>23<a href="#lay02" class="btn-open-in"></a></td>
+											<td>24<a href="#lay02" class="btn-open-in"></a></td>
+											<td>25<a href="#lay02" class="btn-open-in"></a></td>
+										</tr>
+										<tr>
+											<td>26<a href="#lay02" class="btn-open-in"></a></td>
+											<td>27<a href="#lay02" class="btn-open-in"></a></td>
+											<td>28<a href="#lay02" class="btn-open-in"></a></td>
+											<td>29<a href="#lay02" class="btn-open-in"></a></td>
+											<td>30<a href="#lay02" class="btn-open-in"></a></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="calendar-etc">
+							<div class="level-box box-etc">
+								<p>현재등급 <a href="" class="level-info"></a></p>
+								<div class="level">
+									<img src="../image/level02-2.png" alt="레벨-참새(실버)"  class="img-level">
+									<!-- ## 레벨 이미지 ##
+									<img src="../image/level01.png" alt="레벨-알"  class="img-level">
+									<img src="../image/level02-1.png" alt="레벨-참새(브론즈)"  class="img-level">
+									<img src="../image/level02-2.png" alt="레벨-참새(실버)"  class="img-level">
+									<img src="../image/level02-3.png" alt="레벨-참새(골드)"  class="img-level">
+									<img src="../image/level03-1.png" alt="레벨-까치(브론즈)"  class="img-level">
+									<img src="../image/level03-2.png" alt="레벨-까치(실버)"  class="img-level">
+									<img src="../image/level03-3.png" alt="레벨-까치(골드)"  class="img-level">
+									<img src="../image/level04-1.png" alt="레벨-학(브론즈)"  class="img-level">
+									<img src="../image/level04-2.png" alt="레벨-학(실버)"  class="img-level">
+									<img src="../image/level04-3.png" alt="레벨-학(골드)"  class="img-level">
+									<img src="../image/level05-1.png" alt="레벨-매(브론즈)"  class="img-level">
+									<img src="../image/level05-2.png" alt="레벨-매(실버)"  class="img-level">
+									<img src="../image/level05-3.png" alt="레벨-매(골드)"  class="img-level">
+									<img src="../image/level06-1.png" alt="레벨-독수리(브론즈)"  class="img-level">
+									<img src="../image/level06-2.png" alt="레벨-독수리(실버)"  class="img-level">
+									<img src="../image/level06-3.png" alt="레벨-독수리(골드)"  class="img-level">
+									-->
+								</div>
+							</div>
+							<div class="attend-box">
+								<div class="top box-etc">
+									<p>11월 출석일</p>
+									<p class="num">6일</p>
+								</div>
+								<div class="bottom box-etc">
+									<p>연속 최고 출석일</p>
+									<p class="num">5일</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<!-- 레이어팝업 위에 팝업: 달력 '일' 클릭 시 노출 -->
+		<div class="layer-open-in laypop-wrap">
+			<div class="dim-bg02"></div>
+			<div id="lay02" class="laypop-cont">
+				<div class="cont">
+					<div class="pop-header">
+						<h3>2023년 11월 21일</h3>
+						<a href="" class="btn-close"></a>
+					</div>
+					<div class="pop-body">
+						<div class="today-voca-info">
+							<div class="left">
+								<p>오늘 추가한 내가 아는 단어</p>
+								<img src="../image/img-pop-addvova.png" alt="오늘 추가한 내가 아는 단어">
+								<div>
+									<span>48개</span>
+								</div>
+							</div>
+							<div class="right">
+								<p>내가 아는 단어</p>
+								<img src="../image/img-pop-memory.png" alt="내가 아는 단어">
+								<div>
+									<span>802개</span>
+									<span class="arrow">→</span>
+									<span>850개</span>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+
+		<script src="../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+		<script src="../js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/main.js" type="text/javascript"></script>
+
+	</body>
+</html>

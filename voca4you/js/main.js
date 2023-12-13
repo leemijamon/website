@@ -55,6 +55,7 @@ $(function () {
 	// 팝업 외 클릭 시 닫기
 	function layer_close(){
 		$(".layer-open").fadeOut();
+		$(".notice-popup").fadeOut();
 	};
 	function in_layer_close(){ // 레이어팝업 동시 띄우기
 		$(".in-layer-open").fadeOut();
@@ -71,7 +72,7 @@ $(function () {
 	});
 
 	// 버튼 및 dim 영역 클릭 시 닫기
-	$(".act-close, .dim-bg").click(function () {
+	$(".btn-close, .act-close, .dim-bg").click(function () {
 		layer_close();
 	});
 	$(".act-in-close, .dim-bg02").click(function () { // 레이어팝업 동시 띄우기
@@ -145,5 +146,22 @@ $(function () {
 			$(this).addClass('on');
 			$(this).siblings().removeClass('on');
 		}
+	});
+});
+
+/*
+## Tab Menu
+*/
+$(function(){	
+	$('.tab-cont > div').hide();
+	$('.tab-cont > div.show').show();
+	
+	$('.tab-menu li a').click(function(e){
+		e.preventDefault();
+		var tab_id = $(this).attr('href');
+		$('.tab-menu li').removeClass('on');
+		$(this).parent().addClass('on');
+		$('.tab-cont > div:visible').hide();
+		$(tab_id).show();
 	});
 });

@@ -8,33 +8,188 @@
 		<meta name="keyword" content="영어, 영단어, 단어장">
 		<meta name="description" content="중고등 필수 영단어장">
 		<meta name="author" content="">
-		<title>voca4you</title>
+		<title>voca4you 페이지 리스트</title>
 		<link rel="stylesheet" href="css/swiper-bundle.min.css">
 		<link rel="stylesheet" href="css/slick.css">
 		<link rel="stylesheet" href="css/style.css">
+		<style>
+			.page-list-wrap{width: 90%; margin: 5% auto;}
+			.page-list-wrap h1{font-size: 30px;margin-bottom: 20px;}
+			.page-list-table{width: 100%; font-size: 14px;}
+			.page-list-table tr th, .page-list-table tr td{padding: 10px;}
+			.page-list-table tr th{background-color: #f4f4f4; border-width: 1px 0 1px 0; border-style: solid; border-color: #d2d2d2;}
+			.page-list-table tr td{border-bottom: 1px solid #d2d2d2; border-right: 1px dotted #eaeaea; vertical-align: middle;}
+			.page-list-table tr td:last-child{border-right: 0;}
+		</style>
 	</head>
 	<body>
 		<div class="page-list-wrap">
 			<h1>페이지 리스트</h1>
-			<table cellpadding="0" cellspacing="0">
+			<table class="page-list-table" cellpadding="0" cellspacing="0">
 				<thead>
 					<tr>
 						<th>NO.</th>
 						<th>dept1</th>
 						<th>dept2</th>
 						<th>dept3</th>
+						<th>dept4</th>
 						<th>Screen ID</th>
+						<th>URL</th>
 						<th>비고</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>1</td>
+						<td align="center">1</td>
 						<td>메인</td>
 						<td></td>
 						<td></td>
-						<td><a href="./html/main.html">/html/main.html</a></td>
 						<td></td>
+						<td>001</td>
+						<td><a href="./html/main.html" target="_blank">/html/main.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="3">2</td>
+						<td rowspan="3">메인</td>
+						<td rowspan="3">마이페이지</td>
+						<td rowspan="3"></td>
+						<td rowspan="3"></td>
+						<td rowspan="3">001-1</td>
+						<td><a href="./html/my.html" target="_blank">/html/my.html</a></td>
+						<td>프리미엄 서비스 이용 X</td>
+					</tr>
+					<tr>
+						<td><a href="./html/my02.html" target="_blank">/html/my02.html</a></td>
+						<td>프리미엄 서비스(12개월) 이용 O</td>
+					</tr>
+					<tr>
+						<td><a href="./html/my03.html" target="_blank">/html/my03.html</a></td>
+						<td>프리미엄 서비스(1개월) 이용 O</td>
+					</tr>
+					<tr>
+						<td align="center">3</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>멤버십/결제내역</td>
+						<td></td>
+						<td>001-2</td>
+						<td><a href="./html/my-membership.html" target="_blank">/html/my-membership.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">4</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td></td>
+						<td>001-3</td>
+						<td><a href="./html/my-support.html" target="_blank">/html/my-support.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">5</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의하기</td>
+						<td>001-3-1</td>
+						<td><a href="./html/inquiry-write.html" target="_blank">/html/inquiry-write.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">6</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의내역</td>
+						<td>001-3-3</td>
+						<td><a href="./html/inquiry-list.html" target="_blank">/html/inquiry-list.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">7</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의답변</td>
+						<td>001-3-4</td>
+						<td><a href="./html/inquiry-answer.html" target="_blank">/html/inquiry-answer.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">8</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>업데이트 히스토리</td>
+						<td></td>
+						<td>001-4</td>
+						<td><a href="./html/my.html" target="_blank">/html/my.html</a></td>
+						<td>"업데이트 히스토리" 클릭 시 팝업</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">9</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">마이페이지</td>
+						<td rowspan="2">계정관리</td>
+						<td rowspan="2"></td>
+						<td>001-5-1</td>
+						<td><a href="./html/my-account.html" target="_blank">/html/my-account.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>001-5-2</td>
+						<td><a href="./html/my-account02.html" target="_blank">/html/my-account02.html</a></td>
+						<td>유료회원일 경우</td>
+					</tr>
+					<tr>
+						<td align="center">10</td>
+						<td>메인</td>
+						<td>레벨</td>
+						<td></td>
+						<td></td>
+						<td>002</td>
+						<td><a href="./html/level-info.html" target="_blank">/html/level-info.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">11</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">프리미엄</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td>002-1</td>
+						<td><a href="./html/premium.html" target="_blank">/html/premium.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>002-1-1</td>
+						<td><a href="./html/premium02.html" target="_blank">/html/premium02.html</a></td>
+						<td>유료</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">12</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">내가 아는 단어</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td rowspan="2">003</td>
+						<td><a href="./html/word-know01.html" target="_blank">/html/word-know01.html</a></td>
+						<td>일주일 동안 보지 않기</td>
+					</tr>
+					<tr>
+						<td><a href="./html/word-know02.html" target="_blank">/html/word-know02.html</a></td>
+						<td>다시 보지 않기</td>
+					</tr>
+					<tr>
+						<td align="center">13</td>
+						<td>메인</td>
+						<td>내가 아는 단어</td>
+						<td>내가 아는 단어에서 삭제</td>
+						<td></td>
+						<td>007</td>
+						<td><a href="./html/word-know01.html" target="_blank">/html/word-know01.html</a></td>
+						<td>"내가 아는 단어에서 삭제" 클릭 시 확인가능</td>
 					</tr>
 				</tbody>
 			</table>
