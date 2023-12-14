@@ -236,7 +236,8 @@
 
 		<!-- 토스트 팝업 -->
 		<div class="toast-pop">  <!-- 'on' class 추가 시 배너 노출 -->
-			선택한 단어장이 나의 단어장으로 전송되었습니다.
+			선택한 단어장이 나의 단어장으로 전송되었습니다. <br>
+			남은 무료 단어장은 <span class="txt-point">7개</span> 입니다.
 		</div>
 	
 		<div class="layer-open laypop-wrap" layer="1" style="display: none;">
@@ -253,6 +254,27 @@
 					<div class="btn-group">
 						<a href="javascript:;" class="act-close left">취소</a>
 						<a href="javascript:;" class="act-close right" onclick="delconfirm();">확인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 레이어 설명 팝업: 프리미엄 멤버십 안내 -->
+		<div class="notice-popup">
+			<div class="dim-bg"></div>
+			<div class="cont-style word-know-pop">
+				<div class="cont">
+					<div class="pop-header">
+						<h3>프리미엄 멤버십 안내</h3>
+						<a href="javascript:;" class="btn-close"></a>
+					</div>
+					<div class="pop-body">
+						<div class="txt-default">
+							무료로 사용 가능한 단어장을 전부 사용하셨습니다.<br>프리미엄 멤버십으로 전환해서 더 많은 단어장을 이용해 보세요. &#128512;
+						</div>
+					</div>
+					<div class="btn-group center"> 
+						<a href="./my.html">프리미엄 멤버십 바로가기</a>
 					</div>
 				</div>
 			</div>

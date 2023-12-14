@@ -36,7 +36,7 @@
 /*
 ## Common ## 
 */
-body, html{font-family: var(--font-regular); color: var(--color-txt01);} 
+body, html{font-family: var(--font-regular); color: var(--color-txt01); letter-spacing: -1px;} 
 a{text-decoration: none; color: var(--color-txt01);}
 .container{max-width: 720px; margin: 0 auto; padding-bottom: 18.5185vw; position: relative; overflow: hidden;}
 .container.bottom-none{padding-bottom: 0;} 
@@ -54,6 +54,7 @@ a{text-decoration: none; color: var(--color-txt01);}
 .txt-red{color: var(--color-red);}
 h2.page-tit{font-size: 3.6111vw; font-family: var(--font-bold); margin-bottom: 2.7778vw; text-indent: 2.7778vw;}
 h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
+.txt-point{color: var(--color-main); font-family: var(--font-bold);}
 
 /*
 ## Layer Popup
@@ -87,6 +88,7 @@ h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
 .notice-popup .cont-style .cont .pop-body::-webkit-scrollbar-track{background-color: transparent;}
 .notice-popup .btn-group{margin-top: 5.5556vw;}
 .notice-popup .btn-group .chk-wrap{line-height: 9.7222vw; color: #fff; text-align: center; font-size: 2.7778vw; background-color: var(--color-main); border-radius: 0 0 1.1111vw 1.1111vw;} 
+.notice-popup .btn-group.center a{width: 100%; background-color: var(--color-main); border-radius: 0 0 1.111vw 1.1111vw; line-height: 9.7222vw; color: #fff; display: block; text-align: center; font-size: 3.3333vw;}
 
 /*
 ## Button Style
@@ -176,14 +178,14 @@ textarea.input-style{resize: vertical;}
 /*
 ## Fade Out Banner
 */
-.toast-pop{width: 94.4444vw; margin: 0 auto; text-align: center; padding: 4.1667vw 0; font-size: 2.7778vw; border-radius: 1.1111vw; box-shadow: 3px 3px 5px rgba(0,0,0,.1); background-color: var(--color-sub01); position: fixed; bottom: 0; left: var(--center-half); transform: var(--center-translateX);}
+.toast-pop{width: 94.4444vw; margin: 0 auto; text-align: center; padding: 4.1667vw 0; font-size: 2.7778vw; line-height: 1.2; border-radius: 1.1111vw; box-shadow: 3px 3px 5px rgba(0,0,0,.1); background-color: var(--color-sub01); position: fixed; bottom: -13.8889vw; left: var(--center-half); transform: var(--center-translateX);}
 .toast-pop.on{bottom: 19.4444vw; animation: fadeOut 1s 2s forwards; transition: bottom 1s;}
 /*
 ## Check, Radio Box 
 */
 .chk-wrap{}
 .chk-wrap input[type="checkbox"]{display: none;}
-.chk-wrap input[type="checkbox"] + label{display: inline-block; background: transparent url('../image/img-chk-off.png') 0 0 no-repeat; background-size: 5.5556vw 5.5556vw; line-height: 5.5556vw; padding-left: 7.4075vw; cursor: pointer; font-size: 2.7778vw;}
+.chk-wrap input[type="checkbox"] + label{display: inline-block; background: transparent url('../image/img-chk-off.png') 0 0 no-repeat; background-size: 5.5556vw 5.5556vw; line-height: 5.5556vw; padding-left: 7.4075vw; cursor: pointer;}
 .chk-wrap input[type="checkbox"]:checked + label{background: transparent url('../image/img-chk-on.png') 0 0 no-repeat; background-size: 5.5556vw 5.5556vw;}
 .chk-wrap input[type="checkbox"] + label.right{background: transparent url('../image/img-chk-off.png') right center no-repeat; background-size: 5.5556vw 5.5556vw; line-height: 5.5556vw; padding-left: 0; padding-right: 7.4075vw;}
 .chk-wrap input[type="checkbox"]:checked + label.right{background: transparent url('../image/img-chk-on.png') right center no-repeat; background-size: 5.5556vw 5.5556vw;}
@@ -397,26 +399,43 @@ textarea.input-style{resize: vertical;}
 /*
 ## 단어장 목록
 */
-.page-vocabulary .vocabulary-list-top{border-bottom: 1px solid var(--color-border); margin: 0 -20px; padding: 0 20px; box-shadow: 0 3px 3px rgba(0,0,0,.1); overflow: hidden;}
-.page-vocabulary .search-wrap{padding: 20px 0 40px; position: relative;}
-.page-vocabulary .search-wrap input{width: 100%; border: 0; background-color: var(--color-box); padding: 10px 40px; font-size: 20px; border-radius: 30px; font-family: var(--font-regular); box-sizing: border-box;}
-.page-vocabulary .search-wrap input::placeholder{font-size: 20px;}
+.page-vocabulary .vocabulary-list-top{border-bottom: 1px solid var(--color-border); margin: 0 -2.7778vw; padding: 0 2.7778vw; box-shadow: 0 0.4167vw 0.4167vw rgba(0,0,0,.1); overflow: hidden;}
+.page-vocabulary .search-wrap{padding: 2.7778vw 0 5.5556vw; position: relative;}
+.page-vocabulary .search-wrap input{width: 100%; border: 0; background-color: var(--color-box); padding: 1.3889vw 5.5556vw; font-size: 2.7778vw; border-radius: 4.1667vw; font-family: var(--font-regular); box-sizing: border-box;}
+.page-vocabulary .search-wrap input::placeholder{font-size: 2.7778vw;}
 .page-vocabulary .search-wrap input:focus{outline: none;}
-.page-vocabulary .search-wrap button{width: 30px; height: 30px; font-size: 0; background: transparent url('../image/ico-search.png') center center no-repeat; background-size: 20px auto; border: 0; padding: 0; position: absolute; right: 40px; top: 30px;} 
-.page-vocabulary .vocabulary-list-bottom{padding: 50px 0;}
+.page-vocabulary .search-wrap button{width: 4.1667vw; height: 4.1667vw; font-size: 0; background: transparent url('../image/ico-search.png') center center no-repeat; background-size: 2.7778vw auto; border: 0; padding: 0; position: absolute; right: 5.5556vw; top: 4.1667vw;} 
+.page-vocabulary .vocabulary-list-bottom{padding-top: 6.9444vw;}
 .page-vocabulary .vocabulary-list ul li{display: flex; align-items: center; justify-content: space-between;}
-.page-vocabulary .vocabulary-list ul li .vocabulary-name{font-size: 20px;}
-.page-vocabulary .vocabulary-list ul li .chk-wrap label{font-size: 18px; color: var(--color-txt02);}
+.page-vocabulary .vocabulary-list ul li .vocabulary-name{font-size: 2.7778vw;}
+.page-vocabulary .vocabulary-list ul li .chk-wrap label{font-size: 2.5vw; color: var(--color-txt02); background-position: 99% center;}
+.page-vocabulary .vocabulary-list ul li .vaca-use{background-color: var(--color-blue); border-radius: 2.7778vw; padding: 0 2.0833vw; line-height: 4.1667vw; font-size: 2.5vw; color: #fff; margin-left: 0.6944vw;}
+.page-vocabulary .vocabulary-my{display: flex; align-items: center; justify-content: center; margin-top: 5.5556vw;}
+.page-vocabulary .vocabulary-my img{margin-left: 1.3889vw; width:5.5556vw;}
 /* Tab Menu */
 .tab-menu{width: 100%; display: flex; align-items: center; justify-content: space-around;}
 .tab-menu.col3 li{width: 33.3%;}
 .tab-menu.col2 li{width: 50%;}
-.tab-menu li{border-bottom: 1px solid #a7a7a7; padding: 15px 0; text-align: center;}
-.tab-menu li a{font-size: 24px;}
-.tab-menu li.on{border-color: var(--color-main); border-width: 2px;}
+.tab-menu li{border-bottom: 1px solid #a7a7a7; padding: 2.0833vw 0; text-align: center;}
+.tab-menu li a{font-size: 3.3333vw;}
+.tab-menu li.on{border-color: var(--color-main); border-width: 0.6944vw;}
 .tab-menu li.on a{color: var(--color-main); font-family: var(--font-bold);} 
+/* Page Nation */
+.pagination-wrap{}
+.pagination-wrap ul{display: flex; justify-content: center; align-items: center; background-color: var(--color-box); width: 44.4444vw; margin: 9.7222vw auto 0; height: 4.8611vw; padding: 0 4.1667vw; border-radius: 2.7778vw;}
+.pagination-wrap ul li{width: 5.5556vw; text-align: center; cursor: pointer; font-size: 2.2222vw;}
+.pagination-wrap ul li.on{height: 5.5556vw; line-height: 5.5556vw; color: #fff; border-radius: 1.1111vw; background-color: var(--color-main);}
+.pagination-wrap ul .page-next img, .pagination-wrap ul .page-backward img{transform: scaleX(-1);}
+.pagination-wrap ul .page-forward img, .pagination-wrap ul .page-backward img{width: 2.0833vw; height: auto;}
+.pagination-wrap ul .page-prev img, .pagination-wrap ul .page-next img{width: 1.3889vw; height: auto;}
 
-
+/*
+## 나의 단어장
+*/
+.page-my-vocabulary .my-vocabulary-top{}
+.page-my-vocabulary .my-vocabulary-bottom{margin-top: 50px;}
+.page-my-vocabulary .my-vocabulary-list li div{display: flex; align-items: center; justify-content: space-between;}
+.page-my-vocabulary .my-vocabulary-list li .voca-name{}
 
 /**** PC화면 대비 ****/
 @media (min-width: 721px) {
@@ -451,6 +470,7 @@ textarea.input-style{resize: vertical;}
 	.notice-popup .cont-style .cont .pop-body{max-height: 600px; padding: 0 40px;}
 	.notice-popup .btn-group{margin-top: 40px;}
 	.notice-popup .btn-group .chk-wrap{line-height: 70px; font-size: 20px; border-radius: 0 0 8px 8px;} 
+	.notice-popup .btn-group.center a{border-radius: 0 0 8px 8px; line-height: 70px; font-size: 24px;}
 	/* Button */
 	.btn{line-height: 60px; border-radius: 40px; font-size: 22px;}
 	.btn.middle{line-height: 40px; font-size: 20px;}
@@ -488,10 +508,10 @@ textarea.input-style{resize: vertical;}
 	.play-menu-cont .btn-next{margin-left: 10px;}
 	.play-menu-cont .btn-setting{right: 40px; top: 15px;}
 	/* Fade Out Banner */
-	.toast-pop{width: 680px; padding: 30px 0; font-size: 20px; border-radius: 8px; bottom: 0;}
+	.toast-pop{width: 680px; padding: 30px 0; font-size: 20px; border-radius: 8px; bottom: -100px;}
 	.toast-pop.on{bottom: 140px;}
 	/* Checkbox & Radio */
-	.chk-wrap input[type="checkbox"] + label{background-size: 30px 30px; line-height: 30px; padding-left: 40px; font-size: 20px;}
+	.chk-wrap input[type="checkbox"] + label{background-size: 30px 30px; line-height: 30px; padding-left: 40px; }
 	.chk-wrap input[type="checkbox"]:checked + label{background-size: 30px 30px;}
 	.chk-wrap input[type="checkbox"] + label.right{background-size: 30px 30px; line-height: 30px; padding-left: 0; padding-right: 40px; font-size: 20px;}
 	.chk-wrap input[type="checkbox"]:checked + label.right{background-size: 30px 30px;}
@@ -625,4 +645,26 @@ textarea.input-style{resize: vertical;}
 	.num-list{counter-reset: var-count;}
 	.num-list li{padding-left: 20px; }
 	.word-know-pop .txt-ico{ padding-right: 25px; background-size: 25px}
+	/* 단어장 목록 */
+	.page-vocabulary .vocabulary-list-top{margin: 0 -20px; padding: 0 20px}
+	.page-vocabulary .search-wrap{padding: 20px 0 40px; position: relative;}
+	.page-vocabulary .search-wrap input{padding: 10px 40px; font-size: 20px; border-radius: 30px;}
+	.page-vocabulary .search-wrap input::placeholder{font-size: 20px;}
+	.page-vocabulary .search-wrap button{width: 30px; height: 30px; background-size: 20px auto; right: 40px; top: 30px;} 
+	.page-vocabulary .vocabulary-list-bottom{padding-top: 50px;}
+	.page-vocabulary .vocabulary-list ul li .vocabulary-name{font-size: 20px;}
+	.page-vocabulary .vocabulary-list ul li .chk-wrap label{font-size: 18px;}
+	.page-vocabulary .vocabulary-list ul li .vaca-use{border-radius: 20px; padding: 0 15px; line-height: 30px; font-size: 18px; margin-left: 5px;}
+	.page-vocabulary .vocabulary-my{margin-top: 40px;}
+	.page-vocabulary .vocabulary-my img{margin-left: 10px; width: 40px;}
+	/* Tab Menu */
+	.tab-menu li{padding: 15px 0;}
+	.tab-menu li a{font-size: 24px;}
+	.tab-menu li.on{border-width: 5px;}
+	/* Page Nation */
+	.pagination-wrap ul{width: 320px; margin: 70px auto 0; height: 35px; padding: 0 30px; border-radius: 20px;}
+	.pagination-wrap ul li{width: 40px; font-size: 16px;} 
+	.pagination-wrap ul .page-forward img, .pagination-wrap ul .page-backward img{width: 15px; height: auto;}
+	.pagination-wrap ul .page-prev img, .pagination-wrap ul .page-next img{width: 10px; height: auto;}
+	.pagination-wrap ul li.on{height: 40px; line-height: 40px; border-radius: 8px; }
 }

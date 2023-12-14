@@ -22,60 +22,66 @@
 						<a onclick="goBack();">
 							<img src="../image/ico-arrow.png" alt="뒤로가기" class="btn-back">
 						</a>
-						<h1 class="page-name">단어장 목록</h1>
+						<h1 class="page-name">나의 단어장</h1>
 					</div>
 				</header>	
 				<!--# Sub Header: 고정 #-->
 
 				<!--#  컨텐츠 영역 #-->
 				<div class="cont-wrap">
-					<div class="page-vocabulary">
+					<div class="page-my-vocabulary">
 						<section>
-							<div class="vocabulary-list-top">
-								<ul class="tab-menu col3">
-									<li ><a href="#cont01">초급 단어장</a></li>
-									<li><a href="#cont02">중급 단어장</a></li>
-									<li class="on"><a href="#cont03">고급 단어장</a></li>
+							<div class="my-vocabulary-top">
+								<ul class="tab-menu col2">
+									<li class="on"><a href="#cont01">사용중</a></li>
+									<li><a href="#cont02">사용완료</a></li>
 								</ul>
-								<div class="search-wrap">
-									<form action="">
-										<input type="text" name="" value="" placeholder="단어장 이름을 검색해주세요!">
-										<button type="submit">검색</button>	
-									</form>
-								</div>
 							</div>
-							<div class="vocabulary-list-bottom">
+							<div class="my-vocabulary-bottom">
 								<div class="tab-cont">
-									<!-- 초급 당어장 리스트 최대 20개 노출 -->
-									<div id="cont01" class="cont-box">
+									<!-- 사용중 -->
+									<div id="cont01" class="cont-box show">
 										<h2 class="page-tit">단어장 목록</h2>
-										<div class="vocabulary-list">
+										<div class="my-vocabulary-list">
 											<ul class="lis-box">
 												<li>
-													<div>
-														<p class="vocabulary-name">2023년 6월 고1 모의고사</p>
+													<div class="voca-name">
+														<p>2023년 6월 고1모의고사</p>
+														<p class="voca-num">1,200 단어</p>	
 													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca01-1">
-														<label for="voca01-1" class="right">630단어</label>
-													</div>
-												</li>
-												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 고등 베이직</p>
-													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca01-2">
-														<label for="voca01-2" class="right">2,200단어</label>
+													<div class="voca-date">
+														<p>2023.06.03</p>
+														<p>내가 아는 단어 <span class="txt-point">462</span>개</p>
 													</div>
 												</li>
 												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 고등 기초</p>
+													<div class="voca-name">
+														<p>워드마스터 고등 베이직</p>
+														<p class="voca-num">2,200 단어</p>	
 													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca01-3">
-														<label for="voca01-3" class="right">2,000단어</label>
+													<div class="voca-date">
+														<p>2023.06.03</p>
+														<p>내가 아는 단어 <span class="txt-point">1,430</span>개</p>
+													</div>
+												</li>
+												<li>
+													<div class="voca-name">
+														<p>워드마스터 중등 고난도</p>
+														<p class="voca-num">1,800 단어</p>	
+													</div>
+													<div class="voca-date">
+														<p>2023.06.03</p>
+														<p>내가 아는 단어 <span class="txt-point">552</span>개</p>
+													</div>
+												</li>
+												<li>
+													<div class="voca-name">
+														<p>워드마스터 중등 실력</p>
+														<p class="voca-num">800 단어</p>	
+													</div>
+													<div class="voca-date">
+														<p>2023.06.03</p>
+														<p>내가 아는 단어 <span class="txt-point">250</span>개</p>
 													</div>
 												</li>
 											</ul>
@@ -95,7 +101,7 @@
 											</ul>
 										</div>
 									</div>
-									<!-- 중급 당어장 리스트 최대 20개 노출 -->
+									<!-- 사용완료 -->
 									<div id="cont02" class="cont-box">
 										<h2 class="page-tit">단어장 목록</h2>
 										<div class="vocabulary-list">
@@ -139,55 +145,6 @@
 											</ul>
 										</div>
 										<a href="" class="btn vocabulary-my">나의 단어장으로 전송<img src="../image/ico-vocabulary.png" alt="단어장 아이콘"></a>
-										<div class="pagination-wrap">
-											<ul>
-												<li class="page-forward"><img src="../image/ico-page-next02.png" alt="페이지 맨앞으로"></li>
-												<li class="page-prev"><img src="../image/ico-page-next01.png" alt="페이지 넘긴 버튼"></li>
-												<li class="page-num on">1</li>
-												<li class="page-num">2</li>
-												<li class="page-num">3</li>
-												<li class="page-num">4</li>
-												<li class="page-num">5</li>
-												<li class="page-next"><img src="../image/ico-page-next01.png" alt="페이지 넘김 버튼"></li>
-												<li class="page-backward"><img src="../image/ico-page-next02.png" alt="페이지 맨뒤로"></li>
-											</ul>
-										</div>
-									</div>
-									<!-- 고급 당어장 리스트 최대 20개 노출 -->
-									<div id="cont03" class="cont-box show">
-										<h2 class="page-tit">단어장 목록</h2>
-										<div class="vocabulary-list">
-											<ul class="lis-box">
-												<li>
-													<div>
-														<p class="vocabulary-name">고급 단어장01</p>
-													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca03-1">
-														<label for="voca03-1" class="right">1,200단어</label>
-													</div>
-												</li>
-												<li>
-													<div>
-														<p class="vocabulary-name">고급 단어장02 <span class="vaca-use">사용중</span></p>
-													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca03-2">
-														<label for="voca03-2" class="right">2,000단어</label>
-													</div>
-												</li>
-												<li>
-													<div>
-														<p class="vocabulary-name">고급 단어장03</p>
-													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca03-3">
-														<label for="voca03-3" class="right">800단어</label>
-													</div>
-												</li>
-											</ul>
-										</div>
-										<a href="javascript:;" class="btn vocabulary-my btn-open" layer="1">나의 단어장으로 전송<img src="../image/ico-vocabulary.png" alt="단어장 아이콘"></a>
 										<div class="pagination-wrap">
 											<ul>
 												<li class="page-forward"><img src="../image/ico-page-next02.png" alt="페이지 맨앞으로"></li>
