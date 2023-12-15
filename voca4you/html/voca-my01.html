@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div class="wrap">
-			<div class="container">
+			<div class="container bottom-none">
 				<!--# Sub Header: 고정 #-->
 				<header class="header-wrap">
 					<div class="cont">
@@ -34,27 +34,131 @@
 							<div class="my-vocabulary-top">
 								<ul class="tab-menu col2">
 									<li class="on"><a href="#cont01">사용중</a></li>
-									<li><a href="#cont02">사용완료</a></li>
+									<li class="gray"><a href="#cont02">사용완료</a></li>
 								</ul>
 							</div>
 							<div class="my-vocabulary-bottom">
 								<div class="tab-cont">
 									<!-- 사용중 -->
 									<div id="cont01" class="cont-box show">
-										<h2 class="page-tit">단어장 목록</h2>
+										<div class="box-tit">
+											<h2>단어장 목록</h2>
+											<span class="latest-tit" onclick="bottomPop();">최신순</span>
+										</div>
 										<div class="my-vocabulary-list">
-											<ul class="lis-box">
+											<ul class="lis-box acc-cont">
+												<!-- CASE: 하위 단어가 있을 경우: 하위 단어 아코디언 노출 -->
 												<li>
 													<div class="voca-name">
-														<p>2023년 6월 고1모의고사</p>
+														<p class="vocabulary-sub-tit">(하위) 2023년 6월 고1모의고사</p> <!-- 'vocabulary-sub-tit' 클래스 추가 -->
 														<p class="voca-num">1,200 단어</p>	
 													</div>
 													<div class="voca-date">
 														<p>2023.06.03</p>
 														<p>내가 아는 단어 <span class="txt-point">462</span>개</p>
 													</div>
+													<div class="vocabulary-sub-wrap"> <!-- 하위 단어장 컨텐츠 -->
+														<div class="voca-all">
+															<p>1,200단어 (<span class="txt-point">1,432</span>)</p>
+															<div class="chk-wrap">
+																<input type="checkbox" id="chk-all" name="word" value="selectall" onclick="selectAll(this)">
+																<label for="chk-all">전체선택</label>
+															</div>
+														</div>
+														<ul class="vocabulary-sub-list">
+															<li>
+																<p>2023년 6월 고1 모의고사 1장</p>
+																<div>
+																	30단어 (<span class="txt-point">17</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk01" name="word" value="word01">
+																		<label for="chk01">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 2장</p>
+																<div>
+																	30단어 (<span class="txt-point">5</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk02" name="word" value="word02">
+																		<label for="chk02">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 3장</p>
+																<div>
+																	30단어 (<span class="txt-point">11</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk03" name="word" value="word03">
+																		<label for="chk03">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 4장</p>
+																<div>
+																	30단어 (<span class="txt-point">28</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk04" name="word" value="word04">
+																		<label for="chk04">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 5장</p>
+																<div>
+																	30단어 (<span class="txt-point">17</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk05" name="word" value="word05">
+																		<label for="chk05">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 6장</p>
+																<div>
+																	30단어 (<span class="txt-point">6</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk06" name="word" value="word06">
+																		<label for="chk06">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 7장</p>
+																<div>
+																	30단어 (<span class="txt-point">11</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk07" name="word" value="word07">
+																		<label for="chk07">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 8장</p>
+																<div>
+																	30단어 (<span class="txt-point">28</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk08" name="word" value="word08">
+																		<label for="chk08">개별선택</label>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<div class="vocabulary-sub-btn">
+															<div class="vocabulary-open">
+																<a href="" class="btn mini">단어장 열기</a>
+															</div>
+															<div class="acc-close">
+																<img src="../image/ico-arrow.png" alt="접기">
+															</div>
+														</div>
+													</div>
 												</li>
-												<li>
+												<!-- CASE: 하위 단어가 없을 경우: 페이지 이동 -->
+												<li onClick="location.href='word-know03.html'"> 
 													<div class="voca-name">
 														<p>워드마스터 고등 베이직</p>
 														<p class="voca-num">2,200 단어</p>	
@@ -64,17 +168,118 @@
 														<p>내가 아는 단어 <span class="txt-point">1,430</span>개</p>
 													</div>
 												</li>
+												<!-- CASE: 하위 단어가 있을 경우: 하위 단어 아코디언 노출 -->
 												<li>
 													<div class="voca-name">
-														<p>워드마스터 중등 고난도</p>
+														<p class="vocabulary-sub-tit">(하위) 워드마스터 중등 고난도</p> <!-- 단어장에 하위 단어장이 있을 경우 -->
 														<p class="voca-num">1,800 단어</p>	
 													</div>
 													<div class="voca-date">
 														<p>2023.06.03</p>
 														<p>내가 아는 단어 <span class="txt-point">552</span>개</p>
 													</div>
+													<div class="vocabulary-sub-wrap"> <!-- 하위 단어장 컨텐츠 -->
+														<div class="voca-all">
+															<p>1,200단어 (<span class="txt-point">1,432</span>)</p>
+															<div class="chk-wrap">
+																<input type="checkbox" id="chk-all" name="word" value="selectall" onclick="selectAll(this)">
+																<label for="chk-all">전체선택</label>
+															</div>
+														</div>
+														<ul class="vocabulary-sub-list">
+															<li>
+																<p>2023년 6월 고1 모의고사 1장</p>
+																<div>
+																	30단어 (<span class="txt-point">17</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk01" name="word" value="word01">
+																		<label for="chk01">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 2장</p>
+																<div>
+																	30단어 (<span class="txt-point">5</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk02" name="word" value="word02">
+																		<label for="chk02">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 3장</p>
+																<div>
+																	30단어 (<span class="txt-point">11</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk03" name="word" value="word03">
+																		<label for="chk03">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 4장</p>
+																<div>
+																	30단어 (<span class="txt-point">28</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk04" name="word" value="word04">
+																		<label for="chk04">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 5장</p>
+																<div>
+																	30단어 (<span class="txt-point">17</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk05" name="word" value="word05">
+																		<label for="chk05">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 6장</p>
+																<div>
+																	30단어 (<span class="txt-point">6</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk06" name="word" value="word06">
+																		<label for="chk06">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 7장</p>
+																<div>
+																	30단어 (<span class="txt-point">11</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk07" name="word" value="word07">
+																		<label for="chk07">개별선택</label>
+																	</div>
+																</div>
+															</li>
+															<li>
+																<p>2023년 6월 고1 모의고사 8장</p>
+																<div>
+																	30단어 (<span class="txt-point">28</span>)
+																	<div class="chk-wrap">
+																		<input type="checkbox" id="chk08" name="word" value="word08">
+																		<label for="chk08">개별선택</label>
+																	</div>
+																</div>
+															</li>
+														</ul>
+														<div class="vocabulary-sub-btn">
+															<div class="vocabulary-open">
+																<a href="" class="btn mini">단어장 열기</a>
+															</div>
+															<div class="acc-close">
+																<img src="../image/ico-arrow.png" alt="접기">
+															</div>
+														</div>
+													</div>
 												</li>
-												<li>
+												<!-- CASE: 하위 단어가 없을 경우: 페이지 이동 -->
+												<li onClick="location.href='word-know03.html'">
 													<div class="voca-name">
 														<p>워드마스터 중등 실력</p>
 														<p class="voca-num">800 단어</p>	
@@ -86,76 +291,51 @@
 												</li>
 											</ul>
 										</div>
-										<a href="" class="btn vocabulary-my">나의 단어장으로 전송<img src="../image/ico-vocabulary.png" alt="단어장 아이콘"></a>
-										<div class="pagination-wrap">
-											<ul>
-												<li class="page-forward"><img src="../image/ico-page-next02.png" alt="페이지 맨앞으로"></li>
-												<li class="page-prev"><img src="../image/ico-page-next01.png" alt="페이지 넘긴 버튼"></li>
-												<li class="page-num on">1</li>
-												<li class="page-num">2</li>
-												<li class="page-num">3</li>
-												<li class="page-num">4</li>
-												<li class="page-num">5</li>
-												<li class="page-next"><img src="../image/ico-page-next01.png" alt="페이지 넘김 버튼"></li>
-												<li class="page-backward"><img src="../image/ico-page-next02.png" alt="페이지 맨뒤로"></li>
-											</ul>
-										</div>
 									</div>
 									<!-- 사용완료 -->
 									<div id="cont02" class="cont-box">
-										<h2 class="page-tit">단어장 목록</h2>
-										<div class="vocabulary-list">
+										<div class="box-tit">
+											<h2>단어장 목록</h2>
+											<a href="" class="latest-tit">최신순</a>
+										</div>
+										<div class="my-vocabulary-list gray">
 											<ul class="lis-box">
 												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 중등 기초</p>
+													<div class="voca-name">
+														<p>2023년 6월 고1모의고사</p>
+														<p class="voca-num">1,200 단어</p>	
 													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca02-1">
-														<label for="voca02-1" class="right">1,200단어</label>
-													</div>
-												</li>
-												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 중등 고난도</p>
-													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca02-2">
-														<label for="voca02-2" class="right">1,800단어</label>
+													<div class="voca-date">
+														<p>2023.06.03</p>
 													</div>
 												</li>
 												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 중등 실력</p>
+													<div class="voca-name">
+														<p>워드마스터 고등 베이직</p>
+														<p class="voca-num">2,200 단어</p>	
 													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca02-3">
-														<label for="voca02-3" class="right">800단어</label>
+													<div class="voca-date">
+														<p>2023.06.03</p>
 													</div>
 												</li>
 												<li>
-													<div>
-														<p class="vocabulary-name">워드마스터 중등 베이직</p>
+													<div class="voca-name">
+														<p>워드마스터 중등 고난도</p>
+														<p class="voca-num">1,800 단어</p>	
 													</div>
-													<div class="chk-wrap">
-														<input type="checkbox" id="voca02-4">
-														<label for="voca02-4" class="right">2,200단어</label>
+													<div class="voca-date">
+														<p>2023.06.03</p>
 													</div>
 												</li>
-											</ul>
-										</div>
-										<a href="" class="btn vocabulary-my">나의 단어장으로 전송<img src="../image/ico-vocabulary.png" alt="단어장 아이콘"></a>
-										<div class="pagination-wrap">
-											<ul>
-												<li class="page-forward"><img src="../image/ico-page-next02.png" alt="페이지 맨앞으로"></li>
-												<li class="page-prev"><img src="../image/ico-page-next01.png" alt="페이지 넘긴 버튼"></li>
-												<li class="page-num on">1</li>
-												<li class="page-num">2</li>
-												<li class="page-num">3</li>
-												<li class="page-num">4</li>
-												<li class="page-num">5</li>
-												<li class="page-next"><img src="../image/ico-page-next01.png" alt="페이지 넘김 버튼"></li>
-												<li class="page-backward"><img src="../image/ico-page-next02.png" alt="페이지 맨뒤로"></li>
+												<li>
+													<div class="voca-name">
+														<p>워드마스터 중등 실력</p>
+														<p class="voca-num">800 단어</p>	
+													</div>
+													<div class="voca-date">
+														<p>2023.06.03</p>
+													</div>
+												</li>
 											</ul>
 										</div>
 									</div>
@@ -163,8 +343,12 @@
 							<div>
 						</section>
 					</div>
+					<!-- 단어장 목록으로 이동 -->
+					<div class="btn-move">
+						<a href="./voca-note01.html"></a>
+					</div>
 				</div>
-				
+
 				<!--# 하단 메뉴: 재생 #-->
 				<div class="menu-bottom play-menu-wrap" style="display: none;">
 					<div class="play-menu-cont">
@@ -195,6 +379,25 @@
 		<div class="toast-pop">  <!-- 'on' class 추가 시 배너 노출 -->
 			선택한 단어장이 나의 단어장으로 전송되었습니다.
 		</div>
+
+		<div class="bottom-pop-wrap">
+			<div class="dim-bg"></div>
+			<div class="bottom-pop">
+				<div class="head">
+					<h3>정렬</h3>	
+					<a href="javascript:;" class="btn-close"></a>
+				</div>
+				<div class="cont">
+					<ul class="'align-list">
+						<li>최신순</li>
+						<li>오래된 순</li>
+						<li>이름순</li>
+						<li>자주 사용한 순</li>
+						<li>내가 모르는 단어 많은 순</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	
 		<div class="layer-open laypop-wrap" layer="1" style="display: none;">
 			<div class="dim-bg"></div>
@@ -219,6 +422,7 @@
 		<script src="../js/jquery-3.7.1.min.js" type="text/javascript"></script>
 		<script src="../js/slick.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/long-click.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/main.js" type="text/javascript"></script>
 		<script>
 			/* ## 삭제 후 토스트 팝업 노출 ## */
@@ -228,6 +432,10 @@
 				setTimeout(function(){
 					$('.toast-pop').removeClass('on');
 				}, 3000);
+			}
+
+			function bottomPop(){
+				alert('Bottom Pop');
 			}
 		</script>
 	</body>

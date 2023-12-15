@@ -165,3 +165,49 @@ $(function(){
 		$(tab_id).show();
 	});
 });
+
+/*
+## Accordion Menu
+*/
+$(function(){	
+	$('.acc-cont li p.vocabulary-sub-tit').click(function(i){ 
+		var drop_down = $(this).closest('li').find('div.vocabulary-sub-wrap');
+		var date_del = $(this).closest('li').find('div.voca-date');
+		
+		$(this).closest('.acc-cont').find('div.vocabulary-sub-wrap').not(drop_down).slideUp();
+		$(this).closest('.acc-cont').find('div.voca-date').not(date_del).slideDown();
+
+		if ($(this).hasClass('open')) {
+			$(this).removeClass('open');
+
+			$(this).parents('li').removeClass('on');
+		} else {
+			$(this).closest('.acc-cont').find('p.vocabulary-sub-tit.open').removeClass('open');
+			$(this).addClass('open');
+
+			$(this).parents('li').siblings('li').removeClass('on');
+			$(this).parents('li').addClass('on');
+		}
+		
+		drop_down.stop(false, true).slideToggle();
+		date_del.stop(false, true).slideToggle();
+		
+		i.preventDefault();
+	});
+
+	$('.acc-cont li div.acc-close').click(function(i){
+		var sub_close = $(this).closest('li').find('div.vocabulary-sub-wrap');
+		var date_del = $(this).closest('li').find('div.voca-date');
+
+		$(this).closest('li').find('div.vocabulary-sub-wrap').not(sub_close).slideUp();
+		$(this).closest('.acc-cont').find('div.voca-date').not(date_del).slideDown();
+
+		$('.acc-cont').find('li').removeClass('on');
+		$('.acc-cont li p.vocabulary-sub-tit').removeClass('open');
+
+		sub_close.stop(false, true).slideToggle();
+		date_del.stop(false, true).slideToggle();
+
+		i.preventDefault();
+	});
+});

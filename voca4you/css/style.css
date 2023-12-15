@@ -44,6 +44,8 @@ a{text-decoration: none; color: var(--color-txt01);}
 .box-tit{margin: 5.5556vw 0 1.3889vw 0; padding: 0 2.7778vw; display: flex; align-items: center; position: relative;}
 .box-tit h2{font-family: var(--font-bold); font-size: 4.4444vw;}
 .box-tit .more{font-family: var(--font-medium);  font-size: 3.0556vw; position: absolute; right: 2.7778vw; color: var(--color-txt02);}
+.box-tit .latest-tit{font-family: var(--font-medium);  font-size: 3.0556vw; position: absolute; right: 2.7778vw; color: var(--color-txt02); cursor: pointer;} 
+.box-tit .latest-tit::after{content: "▼"; font-size: 2.5vw; margin-left: 0.6944vw;}
 .box-tit .red-notice{margin-left: 1.3889vw;}
 .red-notice{display: inline-block; font-size: 3.3333vw; color: var(--color-red); font-family: var(--font-regular);}
 .strikethrough{text-decoration: line-through;}
@@ -93,8 +95,9 @@ h2.page-tit span{color: var(--color-txt02); font-family: var(--font-medium);}
 /*
 ## Button Style
 */
-.btn{width: 100%; line-height: 9.7222vw; color: #fff; background-color: var(--color-main); display: block; text-align: center; border-radius: 5.5556vw; font-size: 3.8889vw; font-family: var(--font-medium); border: 0;}
+.btn{width: 100%; line-height: 9.7222vw; color: #fff; background-color: var(--color-main); display: block; text-align: center; border-radius: 5.5556vw; font-size: 3.8889vw; font-family: var(--font-medium); border: 0; box-sizing: border-box;}
 .btn.middle{line-height: 6.9444vw; font-size: 2.7778vw; font-family: var(--font-redular);}
+.btn.mini{line-height: 40px; font-size: 18px; padding: 0 20px; font-family: var(--font-redular); display: inline-block; width: auto;}
 .btn.goust{background-color: transparent; color: var(--color-main); border: 1px solid var(--color-main); box-sizing: border-box;}
 .btn.square{border-radius: 1.1111vw;}
 .btn.red{background-color: var(--color-red);}
@@ -434,9 +437,46 @@ textarea.input-style{resize: vertical;}
 */
 .page-my-vocabulary .my-vocabulary-top{}
 .page-my-vocabulary .my-vocabulary-bottom{margin-top: 50px;}
-.page-my-vocabulary .my-vocabulary-list li div{display: flex; align-items: center; justify-content: space-between;}
-.page-my-vocabulary .my-vocabulary-list li .voca-name{}
+.page-my-vocabulary .my-vocabulary-list{margin-top: 20px;}
+.page-my-vocabulary .my-vocabulary-list li{cursor: pointer;}
+.page-my-vocabulary .my-vocabulary-list li.on{box-shadow: 0 0 0 1px var(--color-main) inset; border-color: var(--color-main);}
+.page-my-vocabulary .my-vocabulary-list li > div{display: flex; align-items: center; justify-content: space-between;}
+.page-my-vocabulary .my-vocabulary-list li .voca-name{margin-bottom: 25px;}
+.page-my-vocabulary .my-vocabulary-list li .voca-name p{font-size: 22px;}
+.page-my-vocabulary .my-vocabulary-list li .voca-name p.voca-num{font-size: 20px;}
+.page-my-vocabulary .my-vocabulary-list li .voca-date{background-color: var(--color-box); padding: 15px 30px; border-radius: 25px;}
+.page-my-vocabulary .my-vocabulary-list li .voca-date p{font-size: 20px;}
+.page-my-vocabulary .my-vocabulary-list li .voca-date p .txt-point{font-size: 22px; font-family: var(--font-medium);}
+.tab-menu li.gray.on a{color: var(--color-txt01);}
+.tab-menu li.gray.on{border-color: var(--color-txt01);}
+.page-my-vocabulary .my-vocabulary-list.gray ul li{background-color: #f2f2f2;}
+.page-my-vocabulary .my-vocabulary-list.gray li .voca-date{background-color: #fff;}
+.btn-move{width: 80px; height: 80px; background-color: var(--color-main); border-radius: 50%; box-shadow: 3px 3px 5px rgba(0,0,0,.1); position: fixed; bottom: 20px; right: 20px;}
+.btn-move a{display: block; width: 100%; height: 100%; background: transparent url('../image/ico-voca-plus.png') center center no-repeat; background-size: 40px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap{display: none; background-color: var(--color-box); border-radius: 8px; padding: 20px 30px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .voca-all{display: flex; align-items: center; justify-content: flex-end; border-bottom: 1px solid var(--color-border); margin-bottom: 15px; padding-bottom: 15px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .voca-all p{font-size: 20px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .chk-wrap{margin-left: 10px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .chk-wrap label{font-size: 0;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list{max-height: 200px; overflow: auto; position: relative;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list::-webkit-scrollbar{width: 1px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list::-webkit-scrollbar-thumb{height: auto; background-color: #ddd; border-radius: 1.4815vw;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list::-webkit-scrollbar-track{background-color: transparent;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list li{font-size: 20px; border: 0; box-shadow: none; padding: 0; display: flex; justify-content: space-between; margin-bottom: 15px;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-list li div{}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-btn{}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-btn .vocabulary-open{text-align: right; padding: 10px 0;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-btn .acc-close{text-align: center;}
+.page-my-vocabulary .my-vocabulary-list li .vocabulary-sub-wrap .vocabulary-sub-btn .acc-close img{width: auto; height: 30px; transform: rotate(90deg);}
+/* Bottom Popup */
+.bottom-pop-wrap{width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 4; display: none;}
+.bottom-pop-wrap .dim-bg{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: rgba(0,0,0,.4);}
+.bottom-pop-wrap .bottom-pop{width: 720px; padding: 0 40px 40px; border-radius: 8px 8px 0 0; box-shadow: 0 -5px 5px rgba(0,0,0,.3); box-sizing: border-box; background-color: #fff; position: fixed; bottom: -9999px; left: var(--center-half); transform: var(--center-translateX);} 
+.bottom-pop-wrap .bottom-pop .head{padding: 40px 0; display: flex; align-items: center; justify-content: space-between;}
+.bottom-pop-wrap .bottom-pop .head h3{font-size: 28px; font-family: var(--font-bold);} 
+.bottom-pop-wrap .bottom-pop .head .btn-close{width: 30px; height: 30px; background: #fff url('../image/ico-close.png') 0 0 no-repeat; background-size: cover; display: block;}
 
+ 
 /**** PC화면 대비 ****/
 @media (min-width: 721px) {
 	.container{padding-bottom: 100px;}
@@ -444,6 +484,8 @@ textarea.input-style{resize: vertical;}
 	.box-tit{margin: 40px 0 10px 0; padding: 0 20px;}
 	.box-tit h2{font-size: 28px;}
 	.box-tit .more{font-size: 20px; right: 20px;}
+	.box-tit .latest-tit{font-size: 20px; right: 20px;}
+	.box-tit .latest-tit::after{font-size: 18px; margin-left: 5px;}
 	.box-tit .red-notice{margin-left: 10px;}
 	.red-notice{font-size: 18px;}
 	.notice-txt{font-size: 18px; margin: 10px 0;}
