@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="voca4you">
+		<meta name="keyword" content="영어, 영단어, 단어장">
+		<meta name="description" content="중고등 필수 영단어장">
+		<meta name="author" content="">
+		<title>voca4you</title>
+		<link rel="stylesheet" href="../css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="../css/slick.css">
+		<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="container bottom-none">
+				<!--# Sub Header: 고정 #-->
+				<header class="header-wrap">
+					<div class="cont">
+						<a onclick="goBack();">
+							<img src="../image/ico-arrow.png" alt="뒤로가기" class="btn-back">
+						</a>
+						<h1 class="page-name">레벨업</h1>
+					</div>
+				</header>	
+				<!--# Sub Header: 고정 #-->
+
+				<!--#  컨텐츠 영역 #-->
+				<div class="cont-wrap">
+					<div class="page-levelup">
+						<section>
+							<div class="memorize-cont">
+								<h2 class="page-tit">워드마스터 고등 베이직 1강 <span>(30)</span></h2>
+								<p class="notice-txt">※ 합격 시, 참새 골드 → 까치 브론즈</p>
+								<div class="step">
+									<div class="gauge-wrap">
+										<div class="bar" style="width: 20%;"><!-- 단계별로 width 변화 --></div>
+									</div>
+									<p>100 단어 중 20번째 단어</p>
+								</div>
+								<div class="exam levelup-test">
+									<div class="timer">
+										<div class="center"><p id="sec">3</p></div>
+									</div>
+									<p class="voca">apple</p>
+									<div class="multi-choice">
+										<ul>
+											<li>바나나</li>
+											<li>사과</li>
+										</ul>
+									</div>
+								<div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 레이어 설명 팝업:  레벨업 관련 설명-->
+		<div class="notice-popup">
+			<div class="dim-bg"></div>
+			<div class="cont-style word-know-pop">
+				<div class="cont">
+					<div class="pop-header">
+						<h3>불합격!</h3>
+						<!--a href="javascript:;" class="btn-close"></a-->
+					</div>
+					<div class="pop-body">
+						<div class="txt-default">
+							다시 도전하시겠습니까?
+						</div>
+					</div>
+					<div class="btn-group">
+						<a href="javascript:;" class="act-close left">취소</a>
+						<a href="javascript:;" class="act-close right">확인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../js/jquery-3.7.1.min.js" type="text/javascript"></script>
+		<script src="../js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/main.js" type="text/javascript"></script>
+		<script>
+			// 3초 카운트다운
+			var count = 2;
+         
+			intervalId = setInterval(function() {
+			  
+				$("#sec").html(count);    
+				count--;
+			  
+				if (count < 0) {
+					clearInterval(intervalId); 
+				}
+			}, 1000);
+		</script>
+	</body>
+</html>

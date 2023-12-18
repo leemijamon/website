@@ -170,11 +170,11 @@ $(function(){
 ## Accordion Menu
 */
 $(function(){	
-	$('.acc-cont li p.vocabulary-sub-tit').click(function(i){ 
-		var drop_down = $(this).closest('li').find('div.vocabulary-sub-wrap');
+	$('.acc-cont li .acc-open').click(function(i){ 
+		var drop_down = $(this).closest('li').find('div.acc-box');
 		var date_del = $(this).closest('li').find('div.voca-date');
 		
-		$(this).closest('.acc-cont').find('div.vocabulary-sub-wrap').not(drop_down).slideUp();
+		$(this).closest('.acc-cont').find('div.acc-box').not(drop_down).slideUp();
 		$(this).closest('.acc-cont').find('div.voca-date').not(date_del).slideDown();
 
 		if ($(this).hasClass('open')) {
@@ -182,7 +182,7 @@ $(function(){
 
 			$(this).parents('li').removeClass('on');
 		} else {
-			$(this).closest('.acc-cont').find('p.vocabulary-sub-tit.open').removeClass('open');
+			$(this).closest('.acc-cont').find('p.acc-open.open').removeClass('open');
 			$(this).addClass('open');
 
 			$(this).parents('li').siblings('li').removeClass('on');
@@ -196,18 +196,48 @@ $(function(){
 	});
 
 	$('.acc-cont li div.acc-close').click(function(i){
-		var sub_close = $(this).closest('li').find('div.vocabulary-sub-wrap');
+		var sub_close = $(this).closest('li').find('div.acc-box');
 		var date_del = $(this).closest('li').find('div.voca-date');
 
-		$(this).closest('li').find('div.vocabulary-sub-wrap').not(sub_close).slideUp();
+		$(this).closest('li').find('div.acc-box').not(sub_close).slideUp();
 		$(this).closest('.acc-cont').find('div.voca-date').not(date_del).slideDown();
 
 		$('.acc-cont').find('li').removeClass('on');
-		$('.acc-cont li p.vocabulary-sub-tit').removeClass('open');
+		$('.acc-cont li .acc-open').removeClass('open');
 
 		sub_close.stop(false, true).slideToggle();
 		date_del.stop(false, true).slideToggle();
 
 		i.preventDefault();
+	});
+});
+
+
+/*
+## 하단 팝업 - 정렬 및 설정 
+*/
+$(function(){	
+	$('.bottom-pop-open').click(function(){
+	  $('.bottom-pop-wrap').addClass('on');
+	});
+
+	$('.bottom-pop-wrap .dim-bg, .bottom-pop-wrap .btn-close').click(function(){
+	  $('.bottom-pop-wrap').removeClass('on');
+	});
+});
+
+/*
+## 단어장 사용완료로 옮기기
+*/
+$(function(){	
+	var vocaUse = $('.voca-name .voca-use');
+	var UseMenuNone = $('.voca-use-menu .use-cancel');
+	
+	$(vocaUse).click(function(){
+	  $('.voca-use-menu').addClass('on');
+	});
+
+	$(UseMenuNone).click(function(){
+	  $('.voca-use-menu').removeClass('on');
 	});
 });
