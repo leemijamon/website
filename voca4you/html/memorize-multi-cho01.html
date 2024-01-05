@@ -147,6 +147,15 @@
 						$(this).siblings().removeClass('on');
 					}
 				});
+
+				$('.multi-choice ul li').dblclick(function(){
+					if($(this).hasClass('correct')){
+						$(this).removeClass('correct');
+					} else {
+						$(this).addClass('correct');
+						$(this).siblings().removeClass('correct');
+					}
+				});
 			});
 		</script>
 	</body>

@@ -20,6 +20,8 @@
 			.page-list-table tr th{background-color: #f4f4f4; border-width: 1px 0 1px 0; border-style: solid; border-color: #d2d2d2;}
 			.page-list-table tr td{border-bottom: 1px solid #d2d2d2; border-right: 1px dotted #eaeaea; vertical-align: middle;	line-height: 1.2;}
 			.page-list-table tr td:last-child{border-right: 0;}
+			.edit{background-color: #fff1f1;}
+			.notice{background-color: #f2fbff;}
 		</style>
 	</head>
 	<body>
@@ -39,7 +41,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr class="edit">
 						<td align="center">1</td>
 						<td>메인</td>
 						<td></td>
@@ -47,14 +49,16 @@
 						<td></td>
 						<td>001</td>
 						<td><a href="./html/main.html" target="_blank">/html/main.html</a></td>
-						<td></td>
+						<td>
+							레벨업 효과 추가, 단어장 이름 롤링 수정, 출석체크 터치영역 확대
+						</td>
 					</tr>
 					<tr>
-						<td align="center" rowspan="3">2</td>
-						<td rowspan="3">메인</td>
-						<td rowspan="3">마이페이지</td>
-						<td rowspan="3"></td>
-						<td rowspan="3"></td>
+						<td align="center" rowspan="4">2</td>
+						<td rowspan="4">메인</td>
+						<td rowspan="4">마이페이지</td>
+						<td rowspan="4"></td>
+						<td rowspan="4"></td>
 						<td rowspan="3">001-1</td>
 						<td><a href="./html/my.html" target="_blank">/html/my.html</a></td>
 						<td>프리미엄 서비스 이용 X</td>
@@ -66,6 +70,11 @@
 					<tr>
 						<td><a href="./html/my03.html" target="_blank">/html/my03.html</a></td>
 						<td>프리미엄 서비스(1개월) 이용 O</td>
+					</tr>
+					<tr class="edit">
+						<td>001-1-0</td>
+						<td><a href="./html/my04.html" target="_blank">/html/my04.html</a></td>
+						<td>남은 기간만 표기</td>
 					</tr>
 					<tr>
 						<td align="center">3</td>
@@ -142,7 +151,7 @@
 						<td><a href="./html/my-account02.html" target="_blank">/html/my-account02.html</a></td>
 						<td>유료회원일 경우</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td align="center">10</td>
 						<td>메인</td>
 						<td>레벨</td>
@@ -150,7 +159,7 @@
 						<td></td>
 						<td>002</td>
 						<td><a href="./html/level-info.html" target="_blank">/html/level-info.html</a></td>
-						<td></td>
+						<td>레벨 기준 수정</td>
 					</tr>
 					<tr>
 						<td align="center" rowspan="2">11</td>
@@ -162,10 +171,10 @@
 						<td><a href="./html/premium.html" target="_blank">/html/premium.html</a></td>
 						<td></td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td>002-1-1</td>
 						<td><a href="./html/premium02.html" target="_blank">/html/premium02.html</a></td>
-						<td>유료</td>
+						<td>유료(남은 기간만 표기)</td>
 					</tr>
 					<tr>
 						<td align="center" rowspan="2">12</td>
@@ -217,35 +226,28 @@
 						<td><a href="./html/voca-note03.html" target="_blank">/html/voca-note03.html</a></td>
 						<td>프리미엄 멤버십 안내</td>
 					</tr>
-					<tr>
-						<td align="center" rowspan="3">15</td>
-						<td rowspan="3">메인</td>
-						<td rowspan="3">나의 단어장</td>
-						<td rowspan="3"></td>
-						<td rowspan="3"></td>
+					<tr class="edit">
+						<td align="center" rowspan="2">15</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">나의 단어장</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
 						<td>018</td>
 						<td><a href="./html/voca-my01.html" target="_blank">/html/voca-my01.html</a></td>
 						<td>
-							(하위) 임시표기: 하위단어가 있는 경우, <br>
-							그 외 페이지 이동
+							모든 단어장에 하위 단어장 존재<br>
+							사용중 → 사용완료 확인 가능
 						</td>
 					</tr>
-					<tr>
-						<td>018-2</td>
+					<tr class="edit">
+						<td>018-4</td>
 						<td><a href="./html/voca-my02.html" target="_blank">/html/voca-my02.html</a></td>
 						<td>
-							단어장 "사용완료" 로 이동 <br>
-							오래 누르는 동작이 다른 동작들과 겹쳐 개발자의 도움이 필요할거 같습니다. 임시로 아이콘 누를 시, 단어장 이동하는 메뉴를 오픈하게 하였습니다.
+							모든 단어장에 하위 단어장 존재<br>
+							사용완료 → 사용중 확인 가능
 						</td>
 					</tr>
-					<tr>
-						<td>018-5</td>
-						<td><a href="./html/voca-my03.html" target="_blank">/html/voca-my03.html</a></td>
-						<td>
-
-						</td>
-					</tr>
-					<tr>
+					<tr class="edit">
 						<td align="center">16</td>
 						<td>메인</td>
 						<td>나의 단어장(001>018>019)</td>
@@ -254,7 +256,7 @@
 						<td>019</td>
 						<td><a href="./html/word-know03.html" target="_blank">/html/word-know03.html</a></td>
 						<td>
-							
+							암기 버튼 추가
 						</td>
 					</tr>
 					<tr>
@@ -269,13 +271,13 @@
 							"단어장 선택" 확인 가능
 						</td>
 					</tr>
-					<tr>
-						<td><a href="./html/memorize01.html" target="_blank">/html/memorize02.html</a></td>
+					<tr class="edit">
+						<td><a href="./html/memorize02.html" target="_blank">/html/memorize02.html</a></td>
 						<td>
 							"출제 모드" 확인 가능
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td align="center">18</td>
 						<td>메인</td>
 						<td>암기</td>
@@ -284,7 +286,7 @@
 						<td>038</td>
 						<td><a href="./html/memorize-flash.html" target="_blank">/html/memorize-flash.html</a></td>
 						<td>
-							
+							플립효과 제거
 						</td>
 					</tr>
 					<tr>
@@ -293,10 +295,10 @@
 						<td rowspan="2">암기</td>
 						<td rowspan="2">객관식</td>
 						<td rowspan="2"></td>
-						<td>040</td>
-						<td><a href="./html/memorize-multi-cho01.html" target="_blank">/html/memorize-multi-cho01.html</a></td>
-						<td>
-							
+						<td class="edit">040</td>
+						<td class="edit"><a href="./html/memorize-multi-cho01.html" target="_blank">/html/memorize-multi-cho01.html</a></td>
+						<td class="edit">
+							두 번 터치 시, 액션 추가
 						</td>
 					</tr>
 					<tr>
@@ -319,7 +321,7 @@
 							
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td align="center" rowspan="3">22</td>
 						<td rowspan="3">메인</td>
 						<td rowspan="3">암기</td>
@@ -328,24 +330,24 @@
 						<td>042, 042-1</td>
 						<td><a href="./html/memorize-easy01.html" target="_blank">/html/memorize-easy01.html</a></td>
 						<td>
-							"정답확인" 클릭 시 정답일 경우 확인 가능
+							"정답확인" 클릭 시 정답일 경우 확인 가능 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td>042-2</td>
 						<td><a href="./html/memorize-easy02.html" target="_blank">/html/memorize-easy02.html</a></td>
 						<td>
-							"정답확인" 클릭 시 오답일 경우 확인 가능
+							"정답확인" 클릭 시 오답일 경우 확인 가능 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td>042</td>
 						<td><a href="./html/memorize-easy03.html" target="_blank">/html/memorize-easy03.html</a></td>
 						<td>
-							영어, 뜻의 길이가 길 경우
+							영어, 뜻의 길이가 길 경우 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td align="center" rowspan="3">23</td>
 						<td rowspan="3">메인</td>
 						<td rowspan="3">암기</td>
@@ -354,24 +356,24 @@
 						<td>044, 046</td>
 						<td><a href="./html/memorize-hard01.html" target="_blank">/html/memorize-hard01.html</a></td>
 						<td>
-							"정답확인" 클릭 시 정답일 경우 확인 가능
+							"정답확인" 클릭 시 정답일 경우 확인 가능 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td>047</td>
 						<td><a href="./html/memorize-hard02.html" target="_blank">/html/memorize-hard02.html</a></td>
 						<td>
-							"정답확인" 클릭 시 오답일 경우 확인 가능
+							"정답확인" 클릭 시 오답일 경우 확인 가능 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="edit">
 						<td>044</td>
 						<td><a href="./html/memorize-hard03.html" target="_blank">/html/memorize-hard03.html</a></td>
 						<td>
-							영어, 뜻의 길이가 길 경우
+							영어, 뜻의 길이가 길 경우 - 정답 입력방식 수정
 						</td>
 					</tr>
-					<tr>
+					<tr class="notice">
 						<td align="center" rowspan="5">24</td>
 						<td rowspan="5">메인</td>
 						<td rowspan="5">레벨업</td>
@@ -383,33 +385,36 @@
 							사용자의 '레벨'에 영향을 미치는 테스트 안내 팝업 확인 가능
 						</td>
 					</tr>
-					<tr>
+					<tr class="notice">
 						<td>049</td>
 						<td><a href="./html/levelup02.html" target="_blank">/html/levelup02.html</a></td>
 						<td>
 							테스트 시작 화면
 						</td>
 					</tr>
-					<tr>
+					<tr class="notice">
 						<td>049</td>
 						<td><a href="./html/levelup03.html" target="_blank">/html/levelup03.html</a></td>
 						<td>
 							영어, 뜻의 길이가 길 경우
 						</td>
 					</tr>
-					<tr>
+					<tr class="notice">
 						<td>049-1</td>
 						<td><a href="./html/levelup04.html" target="_blank">/html/levelup04.html</a></td>
 						<td>
 							불합격
 						</td>
 					</tr>
-					<tr>
+					<tr class="notice">
 						<td>050</td>
 						<td><a href="./html/levelup05.html" target="_blank">/html/levelup05.html</a></td>
 						<td>
 							합격
 						</td>
+					</tr>
+					<tr class="notice">
+						<td colspan="8" align="center">타이머가 스톱되는 부분은 개발작업 시, 제어를 해주시는 게 맞는 것 같습니다.</td>
 					</tr>
 				</tbody>
 			</table>
