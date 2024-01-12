@@ -123,7 +123,6 @@ function selectAll(selectAll)  {
 
 /*
 ## 내가 아는 단어 - 단어 테이블 선택 활성화
-*/
 $(function () {
 	$('.word-table tbody tr').click(function(){
 		if($(this).hasClass('on')){
@@ -134,6 +133,7 @@ $(function () {
 		}
 	});
 });
+*/
 
 /*
 ## 내가 아는 단어 - 텍스트 버튼

@@ -142,15 +142,18 @@
 				$('.multi-choice ul li').click(function(){
 					if($(this).hasClass('on')){
 						$(this).removeClass('on');
+						$(this).addClass('correct');
 					} else {
 						$(this).addClass('on');
 						$(this).siblings().removeClass('on');
+						$(this).siblings().removeClass('correct');
 					}
 				});
 
 				$('.multi-choice ul li').dblclick(function(){
 					if($(this).hasClass('correct')){
-						$(this).removeClass('correct');
+						//$(this).removeClass('correct');
+						$(this).siblings().removeClass('correct');
 					} else {
 						$(this).addClass('correct');
 						$(this).siblings().removeClass('correct');
