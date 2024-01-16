@@ -239,7 +239,7 @@ textarea.input-style{resize: vertical;}
 .naver-signup .tit img{width: auto; height: 4.3333vw; margin-right: 0.6944vw;}	
 .naver-signup .user-info li{display: flex; align-items: center; margin-bottom: 1.3889vw;}
 .naver-signup .user-info label{font-size: 3.7778vw; width: 18.8889vw; display: block;}
-.naver-signup .user-info input{width: calc(100% - 18.8889vw); height: 7.5556vw; line-height: 7.5556vw; border-radius: 1.1111vw; font-size: 3.7778vw; border: 1px solid #ccc; padding: 0 2.7778vw; box-sizing: border-box;}
+.naver-signup .user-info input{width: calc(100% - 18.8889vw); height: 8.5556vw; line-height: 8.5556vw; border-radius: 1.1111vw; font-size: 3.7778vw; border: 1px solid #ccc; padding: 0 2.7778vw; box-sizing: border-box;}
 .naver-signup .user-info input:focus{outline: 1px solid var(--color-main);}
 .naver-signup .terms-wrap{padding: 5.5556vw 2.7778vw; background: var(--color-box); margin: 2.7778vw 0;}
 .naver-signup .all-agree{padding: 2.7778vw 0; margin-bottom: 2.7778vw; border-bottom: 1px solid #ccc;}
