@@ -40,7 +40,7 @@ body, html{font-family: var(--font-regular); color: var(--color-txt01); letter-s
 a{text-decoration: none; color: var(--color-txt01);}
 .container{max-width: 720px; margin: 0 auto; padding-bottom: 18.5185vw; position: relative; overflow: hidden;}
 .container.bottom-none{padding-bottom: 0;} 
-.cont-wrap{padding: 5.5556vw 2.7778vw; margin-top: 10.8333vw;}
+.cont-wrap{padding: 5.5556vw 2.7778vw; margin-top: 12.5vw;}
 .box-tit{margin: 5.5556vw 0 1.3889vw 0; padding: 0 2.7778vw; display: flex; align-items: center; position: relative;}
 .box-tit h2{font-family: var(--font-bold); font-size: 4.4444vw;}
 .box-tit .more{font-family: var(--font-medium);  font-size: 3.0556vw; position: absolute; right: 2.7778vw; color: var(--color-txt02);}
@@ -230,6 +230,23 @@ textarea.input-style{resize: vertical;}
 .login-wrap .login-btn-wrap button.btn-kakao span::before{content:''; width: 4.1667vw; height: 4.1667vw; background: transparent url('../image/ico-kakao.png') 0 0 no-repeat; background-size: 4.1667vw auto; display: inline-block; margin-right: 1.3889vw;}
 .login-wrap .login-btn-wrap button.btn-naver{background-color: #00bf19;}
 .login-wrap .login-btn-wrap button.btn-naver span::before{content:''; width: 4.1667vw; height: 4.1667vw; background: transparent url('../image/ico-naver.png') 0 0 no-repeat; background-size: 4.1667vw auto; display: inline-block; margin-right: 1.3889vw;}
+
+/*
+## Naver 간편가입
+*/
+.naver-signup{width: 100%; margin: 0 auto;}
+.naver-signup .tit{font-size: 4.3333vw; display: flex; align-items: center; justify-content: center; font-family: var(--font-medium); margin-bottom: 5.5556vw;}
+.naver-signup .tit img{width: auto; height: 4.3333vw; margin-right: 0.6944vw;}	
+.naver-signup .user-info li{display: flex; align-items: center; margin-bottom: 1.3889vw;}
+.naver-signup .user-info label{font-size: 3.7778vw; width: 18.8889vw; display: block;}
+.naver-signup .user-info input{width: calc(100% - 18.8889vw); height: 7.5556vw; line-height: 7.5556vw; border-radius: 1.1111vw; font-size: 3.7778vw; border: 1px solid #ccc; padding: 0 2.7778vw; box-sizing: border-box;}
+.naver-signup .user-info input:focus{outline: 1px solid var(--color-main);}
+.naver-signup .terms-wrap{padding: 5.5556vw 2.7778vw; background: var(--color-box); margin: 2.7778vw 0;}
+.naver-signup .all-agree{padding: 2.7778vw 0; margin-bottom: 2.7778vw; border-bottom: 1px solid #ccc;}
+.naver-signup .all-agree label{font-size: 3.7778vw;}
+.naver-signup .terms-list li{margin-bottom: 1.3889vw; display: flex; align-items: center; justify-content: space-between;}
+.naver-signup .terms-list li a{text-decoration: underline; font-size:3.2222vw;}
+.naver-signup .terms-list li label{font-size:3.2222vw;} 
 
 /*
 ## Main 
@@ -666,7 +683,7 @@ textarea.input-style{resize: vertical;}
 /**** PC화면 대비 ****/
 @media (min-width: 721px) {
 	.container{padding-bottom: 100px;}
-	.cont-wrap{padding: 40px 20px; margin-top: 78px;}
+	.cont-wrap{padding: 40px 20px; margin-top: 90px;}
 	.box-tit{margin: 40px 0 10px 0; padding: 0 20px;}
 	.box-tit h2{font-size: 28px;}
 	.box-tit .more{font-size: 20px; right: 20px;}
@@ -770,6 +787,20 @@ textarea.input-style{resize: vertical;}
 	.login-wrap .login-btn-wrap button{width: 600px; height: 80px; margin: 0 auto 10px; font-size: 26px; border-radius: 10px; padding-left: 30px;}
 	.login-wrap .login-btn-wrap button.btn-kakao span::before{width: 30px; height: 30px; margin-right: 10px; background-size: 30px auto;}
 	.login-wrap .login-btn-wrap button.btn-naver span::before{width: 30px; height: 30px; margin-right: 10px; background-size: 30px auto;}
+	/* Naver 간편가입 */
+	.naver-signup{width: 90%;}
+	.naver-signup .tit{font-size: 24px; margin-bottom: 40px;}
+	.naver-signup .tit img{ height: 24px; margin-right: 5px;}	
+	.naver-signup .user-info li{margin-bottom: 10px;}
+	.naver-signup .user-info label{font-size: 20px; width: 100px;}
+	.naver-signup .user-info input{width: calc(100% - 100px); height: 40px; line-height: 40px; border-radius: 8px; font-size: 20px; border: 1px solid #ccc; padding: 0 20px;}
+	.naver-signup .user-info input:focus{outline: 1px solid var(--color-main);}
+	.naver-signup .terms-wrap{padding: 40px 20px;margin: 20px 0;}
+	.naver-signup .all-agree{padding: 20px 0; margin-bottom: 20px; border-bottom: 1px solid #ccc;}
+	.naver-signup .all-agree label{font-size: 20px;}
+	.naver-signup .terms-list li{margin-bottom: 10px; }
+	.naver-signup .terms-list li a{font-size: 16px;}
+	.naver-signup .terms-list li label{font-size: 16px;}
 	/* Main */
 	.page-main .user-info{padding: 40px 0;}
 	.page-main .user-info .img-level{width: 200px; height: auto;}

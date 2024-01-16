@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="title" content="voca4you">
+		<meta name="keyword" content="영어, 영단어, 단어장">
+		<meta name="description" content="중고등 필수 영단어장">
+		<meta name="author" content="">
+		<title>voca4you 페이지 리스트</title>
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			.page-list-wrap{width: 90%; margin: 5% auto;}
+			.page-list-wrap h1{font-size: 30px;margin-bottom: 20px;}
+			.page-list-table{width: 100%; font-size: 14px;}
+			.page-list-table tr th, .page-list-table tr td{padding: 10px;}
+			.page-list-table tr th{background-color: #f4f4f4; border-width: 1px 0 1px 0; border-style: solid; border-color: #d2d2d2;}
+			.page-list-table tr td{border-bottom: 1px solid #d2d2d2; border-right: 1px dotted #eaeaea; vertical-align: middle;	line-height: 1.2;}
+			.page-list-table tr td:last-child{border-right: 0;}
+			.edit{background-color: #fff1f1;}
+			.notice{background-color: #f2fbff;}
+		</style>
+	</head>
+	<body>
+		<div class="page-list-wrap">
+			<h1>페이지 리스트</h1>
+			<table class="page-list-table" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<th>NO.</th>
+						<th>dept1</th>
+						<th>dept2</th>
+						<th>dept3</th>
+						<th>dept4</th>
+						<th>Screen ID</th>
+						<th>URL</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td align="center">1</td>
+						<td>로그인 화면</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>000</td>
+						<td><a href="./html/login.html" target="_blank">/html/login.html</a></td>
+						<td>
+							로그인 화면 추가<br>
+							000-1,000-2,000-2-1 해당 페이지는 카카오와 네이버 연동 후, 확인할 수 있는 페이지로 퍼블리싱 작업이 필요하지 않습니다.
+						</td>
+					</tr>
+					<tr class="notice">
+						<td align="center">2</td>
+						<td>NAVER 간편가입</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>000-2-1</td>
+						<td><a href="./html/naver.html" target="_blank">/html/naver.html</a></td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">3</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td>001</td>
+						<td><a href="./html/main.html" target="_blank">/html/main.html</a></td>
+						<td>
+							레벨업 효과 추가, 단어장 이름 롤링 수정, 출석체크 터치영역 확대
+						</td>
+					</tr>
+					<tr>
+						<td>001-1-1</td>
+						<td><a href="./html/main02.html" target="_blank">/html/main02.html</a></td>
+						<td>
+							무료기간 종료, 나의 단어장 사용하려고 할 시 결제문구 팝업
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">4</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">마이페이지</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td>001-1</td>
+						<td><a href="./html/my.html" target="_blank">/html/my.html</a></td>
+						<td>프리미엄 서비스 이용 X</td>
+					</tr>
+					<tr>
+						<td>001-1-0</td>
+						<td><a href="./html/my04.html" target="_blank">/html/my04.html</a></td>
+						<td>프리미엄 이용기간 표기</td>
+					</tr>
+					<tr>
+						<td align="center">5</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>멤버십/결제내역</td>
+						<td></td>
+						<td>001-2</td>
+						<td><a href="./html/my-membership.html" target="_blank">/html/my-membership.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">6</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td></td>
+						<td>001-3</td>
+						<td><a href="./html/my-support.html" target="_blank">/html/my-support.html</a></td>
+						<td>터치 영역 확대</td>
+					</tr>
+					<tr>
+						<td align="center">7</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의하기</td>
+						<td>001-3-1</td>
+						<td><a href="./html/inquiry-write.html" target="_blank">/html/inquiry-write.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">8</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의내역</td>
+						<td>001-3-3</td>
+						<td><a href="./html/inquiry-list.html" target="_blank">/html/inquiry-list.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">9</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>고객지원</td>
+						<td>문의답변</td>
+						<td>001-3-4</td>
+						<td><a href="./html/inquiry-answer.html" target="_blank">/html/inquiry-answer.html</a></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td align="center">10</td>
+						<td>메인</td>
+						<td>마이페이지</td>
+						<td>업데이트 히스토리</td>
+						<td></td>
+						<td>001-4</td>
+						<td><a href="./html/my.html" target="_blank">/html/my.html</a></td>
+						<td>"업데이트 히스토리" 클릭 시 팝업</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">11</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">마이페이지</td>
+						<td rowspan="2">계정관리</td>
+						<td rowspan="2"></td>
+						<td>001-5-1</td>
+						<td><a href="./html/my-account.html" target="_blank">/html/my-account.html</a></td>
+						<td rowspan="2">터치범위 확대</td>
+					</tr>
+					<tr>
+						<td>001-5-2</td>
+						<td><a href="./html/my-account02.html" target="_blank">/html/my-account02.html</a></td>
+					</tr>
+					<tr>
+						<td align="center">12</td>
+						<td>메인</td>
+						<td>레벨</td>
+						<td></td>
+						<td></td>
+						<td>002</td>
+						<td><a href="./html/level-info.html" target="_blank">/html/level-info.html</a></td>
+						<td>레벨 기준 수정</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="3">13</td>
+						<td rowspan="3">메인</td>
+						<td rowspan="3">프리미엄</td>
+						<td rowspan="3"></td>
+						<td rowspan="3"></td>
+						<td>002-1, 002-1-2</td>
+						<td><a href="./html/premium.html" target="_blank">/html/premium.html</a></td>
+						<td>"결제하기" 버튼 클릭 시, 팝업 확인 가능</td>
+					</tr>
+					<tr>
+						<td>002-1-3</td>
+						<td><a href="./html/premium03.html" target="_blank">/html/premium03.html</a></td>
+						<td>"결제하기" 버튼 클릭 시, 팝업 확인 가능</td>
+					</tr>
+					<tr>
+						<td>002-1-1</td>
+						<td><a href="./html/premium02.html" target="_blank">/html/premium02.html</a></td>
+						<td>유료(남은 기간만 표기)</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">14</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">내가 아는 단어</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td rowspan="2">003</td>
+						<td><a href="./html/word-know01.html" target="_blank">/html/word-know01.html</a></td>
+						<td>일주일 동안 보지 않기</td>
+					</tr>
+					<tr>
+						<td><a href="./html/word-know02.html" target="_blank">/html/word-know02.html</a></td>
+						<td>다시 보지 않기</td>
+					</tr>
+					<tr>
+						<td align="center">15</td>
+						<td>메인</td>
+						<td>내가 아는 단어</td>
+						<td>내가 아는 단어에서 삭제</td>
+						<td></td>
+						<td>007</td>
+						<td><a href="./html/word-know01.html" target="_blank">/html/word-know01.html</a></td>
+						<td>"내가 아는 단어에서 삭제" 클릭 시 확인가능</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">16</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">단어장 목록</td>
+						<td></td>
+						<td></td>
+						<td>015</td>
+						<td rowspan="2"><a href="./html/voca-note01.html" target="_blank">/html/voca-note01.html</a></td>
+						<td>체크박스 Disable 인 경우 적용</td>
+					</tr>
+					<tr>
+						<td>나의 단어장으로 전송</td>
+						<td></td>
+						<td>016</td>
+						<td>고급 단어장 "나의 단어장으로 전송" 클릭 시 확인가능</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">17</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">나의 단어장</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td>018</td>
+						<td><a href="./html/voca-my01.html" target="_blank">/html/voca-my01.html</a></td>
+						<td>
+							모든 단어장에 하위 단어장 존재<br>
+							사용중 → 사용완료 확인 가능(첫번째 이동버튼 만)
+						</td>
+					</tr>
+					<tr>
+						<td>018-4</td>
+						<td><a href="./html/voca-my02.html" target="_blank">/html/voca-my02.html</a></td>
+						<td>
+							모든 단어장에 하위 단어장 존재<br>
+							사용완료 → 사용중 확인 가능(첫번째 이동버튼 만)
+						</td>
+					</tr>
+					<tr class="edit">
+						<td align="center">18</td>
+						<td>메인</td>
+						<td>나의 단어장(001>018>019)</td>
+						<td></td>
+						<td></td>
+						<td>019</td>
+						<td><a href="./html/word-know03.html" target="_blank">/html/word-know03.html</a></td>
+						<td>
+							문구수정
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">19</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">암기</td>
+						<td rowspan="2"></td>
+						<td rowspan="2"></td>
+						<td rowspan="2">035</td>
+						<td><a href="./html/memorize01.html" target="_blank">/html/memorize01.html</a></td>
+						<td rowspan="2">
+							터치범위 확대
+						</td>
+					</tr>
+					<tr>
+						<td><a href="./html/memorize02.html" target="_blank">/html/memorize02.html</a></td>
+					</tr>
+					<tr>
+						<td align="center">20</td>
+						<td>메인</td>
+						<td>암기</td>
+						<td>플래시 카드</td>
+						<td></td>
+						<td>038</td>
+						<td><a href="./html/memorize-flash.html" target="_blank">/html/memorize-flash.html</a></td>
+						<td>
+							플립효과 제거
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="2">21</td>
+						<td rowspan="2">메인</td>
+						<td rowspan="2">암기</td>
+						<td rowspan="2">객관식</td>
+						<td rowspan="2"></td>
+						<td>040</td>
+						<td><a href="./html/memorize-multi-cho01.html" target="_blank">/html/memorize-multi-cho01.html</a></td>
+						<td>
+							터치액션 고도화
+						</td>
+					</tr>
+					<tr>
+						<td>041</td>
+						<td><a href="./html/memorize-multi-cho02.html" target="_blank">/html/memorize-multi-cho02.html</a></td>
+						<td>
+							정답, 오답 확인
+						</td>
+					</tr>
+					<tr>
+						<td align="center">22</td>
+						<td>메인</td>
+						<td>암기</td>
+						<td>결과</td>
+						<td></td>
+						<td>041-1</td>
+						<td><a href="./html/memorize-result.html" target="_blank">/html/memorize-result.html</a></td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="3">23</td>
+						<td rowspan="3">메인</td>
+						<td rowspan="3">암기</td>
+						<td rowspan="3">주관식(EASY)</td>
+						<td rowspan="3"></td>
+						<td>042, 042-1</td>
+						<td><a href="./html/memorize-easy01.html" target="_blank">/html/memorize-easy01.html</a></td>
+						<td>
+							"정답확인" 클릭 시 정답일 경우 확인 가능 - 정답 입력방식 수정
+						</td>
+					</tr>
+					<tr>
+						<td>042-2</td>
+						<td><a href="./html/memorize-easy02.html" target="_blank">/html/memorize-easy02.html</a></td>
+						<td>
+							"정답확인" 클릭 시 오답일 경우 확인 가능 - 정답 입력방식 수정
+						</td>
+					</tr>
+					<tr>
+						<td>042</td>
+						<td><a href="./html/memorize-easy03.html" target="_blank">/html/memorize-easy03.html</a></td>
+						<td>
+							영어, 뜻의 길이가 길 경우 - 정답 입력방식 수정
+						</td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="3">24</td>
+						<td rowspan="3">메인</td>
+						<td rowspan="3">암기</td>
+						<td rowspan="3">주관식(HARD)</td>
+						<td rowspan="3"></td>
+						<td>044, 046</td>
+						<td><a href="./html/memorize-hard01.html" target="_blank">/html/memorize-hard01.html</a></td>
+						<td>
+							"정답확인" 클릭 시 정답일 경우 확인 가능 - 정답 입력방식 수정
+						</td>
+					</tr>
+					<tr>
+						<td >047</td>
+						<td ><a href="./html/memorize-hard02.html" target="_blank">/html/memorize-hard02.html</a></td>
+						<td rowspan="2">
+							URL 수정
+						</td>
+					</tr>
+					<tr>
+						<td>044</td>
+						<td><a href="./html/memorize-hard03.html" target="_blank">/html/memorize-hard03.html</a></td>
+					</tr>
+					<tr>
+						<td align="center" rowspan="5">25</td>
+						<td rowspan="5">메인</td>
+						<td rowspan="5">레벨업</td>
+						<td rowspan="5"></td>
+						<td rowspan="5"></td>
+						<td>048</td>
+						<td><a href="./html/levelup01.html" target="_blank">/html/levelup01.html</a></td>
+						<td>
+							사용자의 '레벨'에 영향을 미치는 테스트 안내 팝업 확인 가능
+						</td>
+					</tr>
+					<tr>
+						<td>049</td>
+						<td><a href="./html/levelup02.html" target="_blank">/html/levelup02.html</a></td>
+						<td>
+							테스트 시작 화면
+						</td>
+					</tr>
+					<tr>
+						<td>049</td>
+						<td><a href="./html/levelup03.html" target="_blank">/html/levelup03.html</a></td>
+						<td>
+							영어, 뜻의 길이가 길 경우
+						</td>
+					</tr>
+					<tr>
+						<td>049-1</td>
+						<td><a href="./html/levelup04.html" target="_blank">/html/levelup04.html</a></td>
+						<td>
+							불합격
+						</td>
+					</tr>
+					<tr>
+						<td>050</td>
+						<td><a href="./html/levelup05.html" target="_blank">/html/levelup05.html</a></td>
+						<td>
+							합격
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
