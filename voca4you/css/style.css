@@ -224,7 +224,7 @@ textarea.input-style{resize: vertical;}
 .login-wrap .logo{width: 65vw; height: auto; margin-bottom: 40px;}
 .login-wrap .login-txt{font-size: 4.8611vw; font-family: var(--font-medium);}
 .login-wrap .login-btn-wrap{margin-top: 27.7778vw;}
-.login-wrap .login-btn-wrap button{width: 83.3333vw; height: 11.1111vw; margin: 0 auto 2.7778vw; font-family: var(--font-bold); font-size: 3.6111vw; border: 0; border-radius: 1.3889vw; padding-left: 4.1667vw; display: block; color: #fff;}
+.login-wrap .login-btn-wrap button{width: 83.3333vw; height: 14.1111vw; margin: 0 auto 2.7778vw; font-family: var(--font-bold); font-size: 3.9111vw; border: 0; border-radius: 1.3889vw; padding-left: 4.1667vw; display: block; color: #fff;}
 .login-wrap .login-btn-wrap button span{display: flex; align-items: center; justify-content: center;}
 .login-wrap .login-btn-wrap button.btn-kakao{background-color: #fddc3f; color: #3a2929;}
 .login-wrap .login-btn-wrap button.btn-kakao span::before{content:''; width: 4.1667vw; height: 4.1667vw; background: transparent url('../image/ico-kakao.png') 0 0 no-repeat; background-size: 4.1667vw auto; display: inline-block; margin-right: 1.3889vw;}
